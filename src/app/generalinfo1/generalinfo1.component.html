@@ -1,0 +1,3114 @@
+<form [formGroup]="generalForm" (submit)="onSubmit()">
+
+    <div *ngIf="step==1">
+        
+            <div class="row mt-3">
+                <div class="card-header">1- general information</div>
+            </div>
+            <div class="row mt-2"></div>
+            <div class="card-body">
+                <div class="row mt-3">
+                    <!-- <div class="col-md-1"></div> -->
+                    <div class="col-md-4">
+                        
+                        <label>School Name</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fa fa-school"></i></span>
+                            <input type="text" class="form-control" formControlName="sname">
+                            <div *ngIf="generalForm.controls['sname'].invalid && generalForm.controls['sname'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Post</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" class="form-control" formControlName="post">
+                            <div *ngIf="generalForm.controls['post'].invalid && generalForm.controls['post'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label>District</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fa fa-location-arrow"></i></span>
+                            <input type="text" class="form-control" formControlName="district">
+                            <div *ngIf="generalForm.controls['district'].invalid && generalForm.controls['district'].touched" style="color:red">&nbsp;&nbsp;*</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <!-- <div class="col-md-3"></div> -->
+                    <div class="col-md-4">
+                        <label>State</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                                <i class="fas fa-thumbtack"></i></span>
+                            <select class="form-select" formControlName="state">
+                                <option value="null">----select----</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar
+                                    Islands</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli
+                                </option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                            </select>
+                            <div *ngIf="generalForm.controls['state'].invalid && generalForm.controls['state'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label>City</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-globe"></i></span>
+                            <input type="tel" class="form-control" formControlName="city">
+                            <div *ngIf="generalForm.controls['city'].invalid && generalForm.controls['city'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Phone No</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-phone"></i></span>
+                            <input type="tel" class="form-control" formControlName="pno">
+                            <div *ngIf="generalForm.controls['pno'].invalid && generalForm.controls['pno'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <!-- <div class="col-md-3"></div> -->
+                    <div class="col-md-4">
+                        <label>URL</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-link"></i></span>
+                            <input type="url" pattern="https?://.+" class="form-control" formControlName="url">
+                            <div *ngIf="generalForm.controls['url'].invalid && generalForm.controls['url'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Email</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control" formControlName="email">
+                            <div *ngIf="generalForm.controls['email'].invalid && generalForm.controls['email'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Pin Code</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fa fa-location-arrow"></i></span>
+                            <input type="number" class="form-control" formControlName="pcode">
+                            <div *ngIf="generalForm.controls['pcode'].invalid && generalForm.controls['pcode'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <label>School Location</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-link"></i></span>
+                            <select class="form-control" formControlName="slocation">
+                                <option value="null">--Select School Location--</option>
+                                <option value="Urban">Urban</option>
+                                <option value="Semi-Urban">Semi-Urban</option>
+                                <option value="Rural">Rural</option>
+                                <option value="Tribal">Tribal</option>
+                            </select>
+                        
+                        <div *ngIf="generalForm.controls['slocation'].invalid && generalForm.controls['slocation'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                        <label>Does your school admit children with special needs?</label>
+                        <div *ngIf="generalForm.controls['need'].invalid && generalForm.controls['need'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                        <div class="input-group">
+                            <!-- <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i class="fas fa-envelope"></i></span> -->
+                            <input type="radio" value="yes" id="need_yes" formControlName="need"><label
+                                for="need_yes">Yes</label>
+                            <input type="radio" value="no" id="need_no" style="margin-left: 30px;"
+                                formControlName="need"><label for="need_no">No</label>
+                        </div>
+  
+                    </div>
+                    <div class="col-md-4">
+                        <label>Assessment Academic Year</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-calendar-alt"></i></span>
+                            <input type="number" class="form-control" formControlName="ayear">
+                            <div *ngIf="generalForm.controls['ayear'].invalid && generalForm.controls['ayear'].touched" style="color:red">&nbsp;&nbsp;*</div>
+                           </div>
+                           
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-10"></div>
+                    <div class="col-md-1">
+                        <button class="btn btn-success" (click)="next()">Next</button>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+    <div *ngIf="step==2">
+        
+
+        <div class="row mt-4">
+            <div class="card-header">General Information-2
+            </div>
+        </div>
+        <div class="row mt-3"></div>
+        <div class="card-body">
+            <div class="row mt-3">
+
+                <div class="col-md-4">
+                    <label>Year of Establishment</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-calendar-alt"></i></span>
+                        <input type="number" class="form-control" formControlName="year">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>School Level</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-list"></i></span>
+                        <input type="text" class="form-control" formControlName="slevel">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Medium</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-language"></i></span>
+                        <input type="text" class="form-control" formControlName="medium">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+
+                <div class="col-md-4">
+                    <label>Nature of Affiliation</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                            <i class="fas fa-th-list"></i></span>
+                        <input type="text" class="form-control" formControlName="nature">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Total no.of Teaching staff</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                            <i class="fas fa-sort-numeric-down"></i></span>
+                        <input type="text" class="form-control" formControlName="tstaff">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Gender</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-venus-mars"></i></span>
+                        <select class="form-control form-select" formControlName="gender">
+                            <option value="null">------select------</option>
+                            <option value="co-ed">Co-education</option>
+                            <option value="Boys">Boys</option>
+                            <option value="Grils">Girls</option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+
+                <div class="col-md-4">
+                    <label>Current no.of Girls</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="girls">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Current no.of Boys</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="boys">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Current no.of Students</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="students">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+
+                <div class="col-md-4">
+                    <label>No.of Non Teaching Staff</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="text" class="form-control" formControlName="nstaff">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Name of the Correspondent</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-user"></i></span>
+                        <input type="text" class="form-control" formControlName="cname">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Correspondent Mobile Number</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-phone"></i></span>
+                        <input type="tel" pattern="[0-9]{10}" class="form-control" formControlName="cpno"
+                            required="fill it">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="next()">Next</button>
+                </div>
+            </div>
+        </div>
+   
+    </div>
+
+    <div *ngIf="step==3">
+        <div class="row mt4"></div>
+        <div class="row mt-4">
+            <div class="card-header">General Information-3
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="card-body">
+                <div class="row mt-3">
+
+                    <div class="col-md-4">
+                        <label>Principle's Name</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-user"></i></span>
+                            <input type="text" class="form-control" formControlName="pname">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Principle Email ID</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control" formControlName="pemail" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label>Principle Phone Number</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-phone"></i></span>
+                            <input type="tel" pattern="[0-9]{10}" class="form-control" formControlName="ppno">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+
+                    <div class="col-md-4">
+                        <label>Office Phone Number</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                                <i class="fas fa-phone"></i></span>
+                            <input type="tel" pattern="[0-9]{10}" class="form-control" formControlName="opno">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3"></div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="next()">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3"></div>
+    </div>
+
+    <div *ngIf="step==4">
+
+        <div class="row mt-5"></div>
+        <div class="row mt-5"></div>
+
+            <div class="row mt-4">
+                <div>
+                    <div class="card-header">
+                        1-Recognition, Affiliation and School Governance Governance</div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        
+                            <label style="font-size :13px ;">Is the institute duly recognized by the Govt?</label>
+                        
+                        <div class="row">
+                            <div class="input-group">
+                                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-calendar-alt"></i></span>
+                                <select class="form-control" formControlName="institute_govt">
+                                    <option value="NULL">------select------</option>
+                                    <option value="Yes">Yes</option>
+                                    <!-- <option value="no">No</option> -->
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label style="font-size :13px ;">Name of the Board Affiliated with</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-list"></i></span>
+                            <select class="form-control" formControlName="board_affiliated">
+                                <option value="Marticulation">Marticulation</option>
+                                <option value="CBSE">CBSE</option>
+                                <option value="ICSE">ICSE</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label style="font-size :13px ;">Affiliation No</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-language"></i></span>
+                            <input type="number" class="form-control" formControlName="affiliation_no">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+
+                    <div class="col-md-4">
+                        <label style="font-size :13px ;">Year of Affiliation</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                                <i class="fas fa-th-list"></i></span>
+                            <input type="number" class="form-control" formControlName="affiliation_year">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label style="font-size :13px ;">Is the affiliation permanent or temporary?</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                                <i class="fas fa-sort-numeric-down"></i></span>
+                            <select class="form-control" formControlName="affiliation_condition">
+                                <option value="null">------select------</option>
+                                <option value="permanent">Permanent</option>
+                                <option value="Temporary">Temporary</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label style="font-size :13px ;">State the conditions for affiliation?</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-venus-mars"></i></span>
+                            <input type="number" class="form-control" formControlName="affiliation_cons">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+
+                    <div class="col-md-4">
+                        <label style="font-size :13px ;">Have you obtained minority status certificate?</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-sort-numeric-down"></i></span>
+                            <input type="text" class="form-control" formControlName="status_certificate">
+                        </div>
+                    </div>
+                </div>
+            <div class="row mt-1">
+                    <div style="text-align: center;">
+                        Number of Students According to Religion
+                    </div>
+                </div>
+               
+                    
+                <div class="row mt-3">
+
+                    <div class="col-md-3">
+                        <label style="font-size :14px ;">Hindhu</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-sort-numeric-down"></i></span>
+                            <input type="number" class="form-control" formControlName="hindhu">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label style="font-size :14px ;">Christian</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-sort-numeric-down"></i></span>
+                            <input type="number" class="form-control" formControlName="cristian">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label style="font-size :14px ;">Islam</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-sort-numeric-down"></i></span>
+                            <input type="number" class="form-control" formControlName="islam" required="fill it">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label style="font-size :14px ;">Others</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-sort-numeric-down"></i></span>
+                            <input type="number" class="form-control" formControlName="others" required="fill it">
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row mt-3">
+                    <div class="col-md-3">
+                        <label style="font-size :14px ;">Non-believers</label>
+                        <div class="input-group">
+                            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-sort-numeric-down"></i></span>
+                            <input type="number" class="form-control" formControlName="non_believers"
+                                required="fill it">
+                        </div>
+                    </div>
+                </div>
+                    <div class="row mt-3">
+                        
+                        <div style="text-align:center;">
+
+                            <label>School Secured Other Essential Certificates</label>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div class="row mt-2">
+                        
+                        <div class="col-md-3">
+                            <label>Fire safty certificate</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="radio" formControlName="fire_certificate" value="yes">Yes
+                        </div>
+                        <div class="col-md-1">
+                            <input type="radio" formControlName="fire_certificate" value="no">No
+                        </div>
+                        <div class="col-md-7"></div>
+                    </div>
+                    <div class="row mt-2">
+                       
+                        <div class="col-md-3">
+                            <label>Sanitation certificate</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="radio" formControlName="sanitation_certificate" value="yes">Yes
+                        </div>
+                        <div class="col-md-1">
+                            <input type="radio" formControlName="sanitation_certificate" value="no">No
+                        </div>
+                        <div class="col-md-7"></div>
+                    </div>
+                    <div class="row mt-2">
+                        
+                        <div class="col-md-3">
+                            <label> Building Safty certificate</label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="radio" formControlName="building_certificate" value="yes">Yes
+                        </div>
+                        <div class="col-md-1">
+                            <input type="radio" formControlName="building_certificate" value="no">No
+                        </div>
+                        <div class="col-md-7"></div>
+                    </div> 
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-md-1">
+                        <button class="btn btn-success" (click)="previous()">Previous</button>
+                    </div>
+                    <div class="col-md-10"></div>
+                    <div class="col-md-1">
+                        <button class="btn btn-success" (click)="next()">Next</button>
+                    </div>
+                </div>
+            </div>
+
+        
+    </div>
+
+    <div *ngIf="step==5">
+        <div class="row mt-3"></div>
+        <div class="row mt-4">
+            <div>
+                <div class="card-header">
+                    5 - Recognition, Affiliation and School Governance Governance</div>
+            </div>
+        </div>
+        <div class="row mt-2"></div>
+        <div class="card-body">
+        <div class="row mt-3">
+            
+            <div class="col-md-4 ">
+                <div class="row">
+                    <label style="font-size :13px ;">School owned by</label>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-calendar-alt"></i></span>
+                        <select class="form-control form-select" formControlName="school_owned">
+                            <option value="null">------select------</option>
+                            <option value="co-ed">individual</option>
+                            <option value="Boys">trust</option>
+                            <option value="Grils">Company</option>
+                            <option value="Grils">Society</option>
+                            <option value="Grils">Government</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Name of the Trust/ Society/ Company</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-list"></i></span>
+                    <input type="text" class="form-control" formControlName="name_trust">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Is the Trust/ Society/ Company registered?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-language"></i></span>
+                    <select class="form-control form-select" formControlName="registered">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            
+            <div class="col-md-4">
+                <label style="font-size :13px ;">If yes, under which Act?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="text" class="form-control" formControlName="under_act">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Year of Registration</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="registration_year">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Registration No</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-venus-mars"></i></span>
+                    <input type="number" class="form-control" formControlName="registration_no">
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Period of Validity of Registration</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="text" class="form-control" formControlName="period_validity">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Name(President/Chairman/ Managing Trustee)</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="text" class="form-control" formControlName="name_chairman">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Designation(President/Chairman/ Managing Trustee)</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="text" class="form-control" formControlName="designation">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+        
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Address(President/Chairman/ Managing Trustee)</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="text" class="form-control" formControlName="address_chairman">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Phone Number(President/Chairman/ Managing Trustee)</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="number" class="form-control" formControlName="pno_chairman">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Email address(President/Chairman/ Managing Trustee)
+                </label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="text" class="form-control" formControlName="email_chairman">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="next()">Next</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div *ngIf="step==6">
+
+       
+        <div class="row mt-3"></div>
+        <div class="row mt-4">
+            <div>
+                <div class="card-header">
+                    -Recognition, Affiliation and School Governance Governance</div>
+            </div>
+        </div>
+        <div class="row mt-2"></div>
+        <div class="row mt-1">
+            <div style="text-align: center;">
+                <h3>Governing body</h3>
+            </div>
+        </div>
+        <div class="card-body">
+        <div class="row mt-1"> 
+            <div class="col-md-4">
+                <div class="row">
+                    <label style="font-size :13px ;">Governing Body of the Trust / Society / Company</label>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-calendar-alt"></i></span>
+                        <select class="form-control form-select" formControlName="governing">
+                            <option value="yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">How many members in it?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-list"></i></span>
+                    <input type="number" class="form-control" formControlName="members">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Tenure of each Member</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-language"></i></span>
+                    <input type="number" class="form-control" formControlName="tenure">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div style="text-align: center;">
+                <h3>Educative Pastoral Community Council (EPCC)</h3>
+            </div>
+        </div>
+        <div class="row mt-3">
+            
+            <div class="col-md-4">
+                <label style="font-size :13px ;">
+                    Educative Community Council (EPCC)</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <select class="form-control form-select" formControlName="epcc">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">How many members in it?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="members_epcc">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Tenure of each Member</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-venus-mars"></i></span>
+                    <input type="number" class="form-control" formControlName="epcc_tenure">
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div style="text-align: center;">
+                <h3>Parent – Teacher Association</h3>
+            </div>
+        </div>
+        <div class="row mt-3">
+            
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Parent – Teacher Association Executive Body?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <select class="form-control form-select" formControlName="pt_executive">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">How many members in it?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="number" class="form-control" formControlName="pt_members">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">Tenure of each Member
+                </label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="number" class="form-control" formControlName="pt_tenure">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row mt-3"></div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="next()">Next</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div *ngIf="step==7">
+
+
+        <div class="row mt-4">
+            <div>
+                <div class="card-header">7
+                    -Recognition, Affiliation and School Governance Governance</div>
+            </div>
+        </div>
+        
+        <div class="row mt-2">
+            <div style="text-align: center;">
+                <h3>Student body</h3>
+            </div>
+        </div>
+
+        <div class="card-body">
+
+        <div class="row mt-3">
+            
+            <div class="col-md-3">
+                <div class="row">
+                    <label style="font-size :13px ;">Student Association/Councill</label>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-calendar-alt"></i></span>
+                        <select class="form-control form-select" formControlName="st_councill">
+                            <option value="null">------select------</option>
+                            <option value="Yes">yes</option>
+                            <option value="no">No</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">How many members in it?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-list"></i></span>
+                    <input type="number" class="form-control" formControlName="st_members">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">Tenure of each Member</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-language"></i></span>
+                    <input type="number" class="form-control" formControlName="st_tenure">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">General Grievance / Complaint Cell?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-language"></i></span>
+                    <select class="form-control form-select" formControlName="general_grievance">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-1">
+            <div style="text-align: center;">
+               <h3> School Management Committee</h3>
+            </div>
+        </div>
+        <div class="row mt-3">
+            
+            <div class="col-md-3">
+                <label style="font-size :13px ;">
+                    School Management Committee?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <select class="form-control form-select" formControlName="sm_committee">
+                        <option value="yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">Constitution of Management Committee</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-sort-numeric-down"></i></span>
+                    <select class="form-control form-select" formControlName="cm_committee">
+                        <option value="trust">Trust</option>
+                        <option value="society">Society</option>
+
+                        <option value="staff">Staff</option>
+                        <option value="companymembers">Company members</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">How many members in it?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-venus-mars"></i></span>
+                    <input type="number" class="form-control" formControlName="cm_members">
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">Tenure of each Member</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-venus-mars"></i></span>
+                    <input type="number" class="form-control" formControlName="cm_tenure">
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row mt-4"></div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="next()">Next</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div *ngIf="step==8">
+        
+        <div class="row mt-4"></div>
+            <div class="card-header">10-Infrasructure &
+                Academic facilities
+            </div>
+        
+        <div class="card-body">
+            <div class="row mt-3">
+                
+                <div class="col-md-4">
+                    <label>Is the school located in a rented building or own building?</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-calendar-alt"></i></span>
+                        <select formControlName="school_building" class="form-select">
+                            <option value="Rented">Rented building</option>
+                            <option value="Own">own building</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Area of school Campus (in sq. mtrs.)</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-list"></i></span>
+                        <input type="text" class="form-control" formControlName="cam_area">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Built Up Area(in sq. mtrs.)</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-language"></i></span>
+                        <input type="text" class="form-control" formControlName="built_area">
+                    </div>
+                </div>
+            </div>
+       
+
+        <div class="row mt-3">
+            
+            <div class="col-md-4">
+                <label>Playground Area (in sq. mtrs)</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="text" class="form-control" formControlName="play_area">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label>Number of Buildings / Floors</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="no_building">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label>Provisions for differently available</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-venus-mars"></i></span>
+                    <select class="form-control form-select" formControlName="provision">
+                        <option value="null">------select------</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+
+                    </select>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+           
+            <div class="col-md-4">
+                <label>Number of staircases</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="no_staircases">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label>No. of Lifts</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="no_lift">
+                </div>
+            </div>
+            <div class="row mt-3"></div>
+
+        </div>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-info" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="next()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="step==9">
+        <div class="row mt-5"></div>
+        <div class="row mt-5"></div>
+        <div class="row mt-5"></div>
+        <div class="row mt-5">
+        <div class="card-header" style="background-color:  rgb(45, 172, 45);text-align: center;">
+            11 - Infrastructural &
+                Academic Facilities
+           
+        </div>
+       </div>
+        
+        <div class="cardd-body">
+            <div class="row mt-3">
+                
+                <div class="col-md-4">
+                    <label>Class Rooms</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-calendar-alt"></i></span>
+                        <input type="number" class="form-control" formControlName="class_rooms">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Staff Rooms</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-list"></i></span>
+                        <input type="number" class="form-control" formControlName="srooms">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Physics Lab</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-language"></i></span>
+                        <input type="number" class="form-control" formControlName="plab">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-md-4">
+                    <label>Chemistry Lab</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                            <i class="fas fa-th-list"></i></span>
+                        <input type="number" class="form-control" formControlName="clab">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Biology Lab</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                            <i class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="blab">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Mathematics Lab</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-venus-mars"></i></span>
+                        <input type="number" class="form-control" formControlName="mlab">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-md-4">
+                    <label>
+                        Computer Science Lab</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="comlab">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Language Lab</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="llab">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Home Science Lab</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="hslab">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-md-4">
+                    <label>Library</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="library">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Auditorium</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-user"></i></span>
+                        <input type="number" class="form-control" formControlName="auditorium">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Counselors Room</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-phone"></i></span>
+                        <input type="number" class="form-control" formControlName="counroom" required="fill it">
+                    </div>
+                </div>
+            </div>
+           
+            <div class="row mt-3">
+                
+                <div class="col-md-4">
+                    <label>Visitors Parlor (space)</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-calendar-alt"></i></span>
+                        <input type="number" class="form-control" formControlName="parlor">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Prayer Room / Chapel</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-list"></i></span>
+                        <input type="number" class="form-control" formControlName="proom">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Infirmary / Sick Room</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-language"></i></span>
+                        <input type="number" class="form-control" formControlName="sick_room">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-md-4">
+                    <label>Canteen</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                            <i class="fas fa-th-list"></i></span>
+                        <input type="number" class="form-control" formControlName="canteen">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Security Room</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                            <i class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="secroom">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Other Room/ Halls</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-venus-mars"></i></span>
+                        <input type="number" class="form-control" formControlName="oroom">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-md-4">
+                    <label>Staff- Urinals/Toilets</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="stoilet">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Student-Urinals/Toilets</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="std_toilet">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Rooms</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-sort-numeric-down"></i></span>
+                        <input type="number" class="form-control" formControlName="rooms">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-md-4">
+                    <label>Does your school admit children with special needs?</label>
+                    <div class="input-group">
+
+                        <input type="radio" value="yes" formControlName="spcl_stud"> YES
+                        <input type="radio" value="no" formControlName="spcl_stud" style="margin-left: 100px;">NO
+                    </div>
+                </div>
+
+            </div>
+        </div>        
+            <div class="row mt-3"></div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-md-1">
+                        <button class="btn btn-info" (click)="previous()">Previous</button>
+                    </div>
+                    <div class="col-md-10"></div>
+                    <div class="col-md-1">
+                        <button class="btn btn-success" (click)="next()">Next</button>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+    <div *ngIf="step==10">
+        
+          
+                <div class="row mt-4"> 
+                <div class="card-header" style="background-color:  rgb(45, 172, 45);text-align: center;">12
+                    -Infrastructural
+                    & Academic Facilities</div>
+                </div>
+                <div class="row mt-3">
+
+                    <div class="col-md-5"></div>
+
+                    <div class="col-md-2">
+                        <label><b>Safety and Security</b></label>
+                    </div>
+                </div>
+                <div class="card-body">
+                <div class="row mt-3">
+                   
+                    <div class="col-md-3">
+                        <label>Boundary Wall?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-file-signature"></i></span>
+                                <select class="form-select" formControlName="wall">
+                                    <option selected>--SELECT--</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div><br />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label>If Yes, Boundary Wall?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-file-signature"></i></span>
+                                <select class="form-select" formControlName="if_wall">
+
+                                    <option selected>--SELECT--</option>
+                                    <option value="partial">partial</option>
+                                    <option value="complete">complete</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-3">
+                        <label>CCTV Cameras installed?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-file-signature"></i></span>
+                                <select class="form-select" formControlName="cctv">
+                                    <option selected>--SELECT--</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <label>Data saved?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-file-signature"></i></span>
+                                <select class="form-select" formControlName="ds">
+                                    <option selected>--SELECT--</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row mt-3">
+                   
+                    <div class="col-md-3">
+                        <label>How many cameras?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-envelope"></i></span>
+                                <input type="number" placeholder="Enter How many cameras?" formControlName="no_camera"
+                                    required class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <label>Male Security Guard?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-file-signature"></i></span>
+                                <select class="form-select" formControlName="guard">
+                                    <option selected>--SELECT--</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <label>How many Male Security Guards?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-user-circle"></i></span>
+                                <input type="number" placeholder="15" formControlName="no_guard" required
+                                    class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <label>Female Security Guard?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-file-signature"></i></span>
+                                <select class="form-select" formControlName="fguard">
+
+                                    <option selected>--SELECT--</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row mt-3">
+                                        
+                    <div class="col-md-4">
+                        <label style="font-size: 14px;">How many Female Security Guards?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-envelope"></i></span>
+                                <input type="number" placeholder="08" formControlName="no_fguard" required
+                                    class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <label style="font-size: 14px;">Drinking water facilities?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-file-signature"></i></span>
+                                <select class="form-select" formControlName="water">
+
+                                    <option selected>--SELECT--</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4">
+                        <label>Proper drainage facilities?</label>
+                        <div class="row mt-1">
+                            <div class="input-group">
+                                <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                        class="fas fa-file-signature"></i></span>
+                                <select class="form-select" formControlName="drainage">
+                                    <option selected>--SELECT--</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <button class="btn btn-info" (click)="previous()">Previous</button>
+                        </div>
+                        <div class="col-md-10"></div>
+                        <div class="col-md-1">
+                            <button class="btn btn-success" (click)="next()">Next</button>
+                        </div>
+                    </div>
+                </div>
+           
+       
+    </div>
+
+    <div *ngIf="step==11">
+       <div class="row mt-4"></div>
+            <div class="card-header" style="background-color:  rgb(45, 172, 45);text-align: center;">
+                13 -Infrastructural & Academic Facilities
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-5"></div>
+                <div class="col-md-3">
+                    <label><b>Other Benefits for the Students</b></label>
+                </div>
+            </div>
+            <div class="card-body">
+            <div class="row mt-3">
+                
+
+                <div class="col-md-3">
+                    <label>Midday Meals Scheme?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-file-signature"></i></span>
+                            <select class="form-select" formControlName="mmeals">
+
+                                <option selected>--SELECT--</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+                <div class="col-md-3">
+                    <label>No. of buses owned by school</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-envelope"></i></span>
+                            <input type="number" placeholder="Enter No. of buses owned by school"
+                                formControlName="no_buses" required class="form-control">
+                        </div>
+                    </div><br />
+                </div>
+
+                <div class="col-md-3">
+                    <label>GPS enabled camera</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-user-circle"></i></span>
+                            <input type="number" placeholder="Enter GPS enabled camera" formControlName="gps" required
+                                class="form-control">
+                        </div>
+                    </div><br />
+                </div>
+
+
+
+                <div class="col-md-3">
+                    <label>No. of Lady Attendance(if needed)</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-user-circle"></i></span>
+                            <input type="number" placeholder="Enter No. of Lady Attendance(if needed)"
+                                formControlName="nola" required class="form-control">
+                        </div>
+                    </div><br />
+                </div>
+            </div>
+            <div class="row mt-2">
+               
+                <div class="col-md-3">
+                    <label>First Aid kit</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-envelope"></i></span>
+                            <input type="number" placeholder="Enter First Aid kit" formControlName="first_aid" required
+                                class="form-control">
+                        </div>
+                    </div><br />
+                </div>
+
+
+
+
+                <div class="col-md-3">
+                    <label>Drinking Water</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-user-circle"></i></span>
+                            <input type="number" placeholder="Enter Drinking Water" formControlName="no_water" required
+                                class="form-control">
+                        </div>
+                    </div><br />
+                </div>
+
+
+
+                <div class="col-md-3">
+                    <label>No. of buses sub-contracted</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-user-circle"></i></span>
+                            <input type="number" placeholder="enter No. of buses sub-contracted"
+                                formControlName="no_sbus" required class="form-control">
+                        </div>
+                    </div><br />
+                </div>
+
+
+                <div class="col-md-3">
+                    <label>Eligibility for Govt free bus pass?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-file-signature"></i></span>
+                            <select class="form-select" formControlName="pas">
+                                <option selected>--SELECT--</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+            </div>
+            <div class="row mt-3">
+                
+                <div class="col-md-4">
+                    <label>Free transport Service offered by the School?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-file-signature"></i></span>
+                            <select class="form-select" formControlName="free_tran">
+
+                                <option selected>--SELECT--</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+            </div>
+       
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-md-1">
+                        <button class="btn btn-info" (click)="previous()">Previous</button>
+                    </div>
+                    <div class="col-md-10"></div>
+                    <div class="col-md-1">
+                        <button class="btn btn-success" (click)="next()">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="step==12">
+        <div class="row mt-4"></div>
+       
+            <div class="card-header"><b>15. Teching staff</b></div>
+        
+        <div class="row mt-3"></div>
+        <div class="row mt-1">
+            <div class="col-md-3"><b>staff</b></div>
+            <div class="col-md-3"><b>Permanent</b></div>
+            <div class="col-md-3"><b>Temporary</b></div>
+            <div class="col-md-3"><b>Total</b></div>
+        </div>
+        <div class="card-body">
+        <div class="row mt-4">
+            <div class="col-md-3"></div>
+            <div class="col-md-1">
+                Male
+            </div>
+            <div class="col-md-2">
+                Female
+            </div>
+            <div class="col-md-1">
+                Male
+            </div>
+            <div class="col-md-2">
+                Female
+            </div>
+            <div class="col-md-1">
+                Male
+            </div>
+            <div class="col-md-2">
+                Female
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-3">Principal/Head Master</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-c  ontrol" formControlName="prin_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="prin_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="prin_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="prin_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['prin_permale'].value+generalForm.controls['prin_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['prin_perfemale'].value+generalForm.controls['prin_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-md-3">Vice Principal/Asst HM</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="vp_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="vp_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="vp_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="vp_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['vp_permale'].value+generalForm.controls['vp_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['vp_perfemale'].value+generalForm.controls['vp_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-md-3">PGTs (Post Graduate Teachers)</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="pg_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="pg_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="pg_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="pg_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['pg_permale'].value+generalForm.controls['pg_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['pg_perfemale'].value+generalForm.controls['pg_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-md-3">TGTs (Trained Graduate Teachers)</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="tg_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="tg_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="tg_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="tg_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['tg_permale'].value+generalForm.controls['tg_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['tg_perfemale'].value+generalForm.controls['tg_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-md-3">PRTs (Primary Teachers)</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="prt_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="prt_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="prt_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="prt_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['prt_permale'].value+generalForm.controls['prt_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['prt_perfemale'].value+generalForm.controls['prt_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-3">NTTs (Nursery Trained Teachers)</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="nt_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="nt_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="nt_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="nt_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['nt_permale'].value+generalForm.controls['nt_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['nt_perfemale'].value+generalForm.controls['nt_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-3">Untrained Teachers</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="ut_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="ut_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="ut_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="ut_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['ut_permale'].value+generalForm.controls['ut_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['ut_perfemale'].value+generalForm.controls['ut_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-3">Librarian</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="lib_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="lib_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="lib_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="lib_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['lib_permale'].value+generalForm.controls['lib_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['lib_perfemale'].value+generalForm.controls['lib_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-3">Arts/Dance/Music Teachers</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="art_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="art_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="art_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="art_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['art_permale'].value+generalForm.controls['art_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['art_perfemale'].value+generalForm.controls['art_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-3">Counsellors</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="coun_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="coun_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="coun_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="coun_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['coun_permale'].value+generalForm.controls['coun_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['coun_perfemale'].value+generalForm.controls['coun_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-3">Computer Literacy</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="comlit_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="comlit_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="comlit_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="comlit_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['comlit_permale'].value+generalForm.controls['comlit_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['comlit_perfemale'].value+generalForm.controls['comlit_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-3">Faith Ministers</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="faithmin_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="faithmin_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="faithmin_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="faithmin_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['faithmin_permale'].value+generalForm.controls['faithmin_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['faithmin_perfemale'].value+generalForm.controls['faithmin_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-3">Nurse</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="nurse_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="nurse_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="nurse_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="nurse_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['nurse_permale'].value+generalForm.controls['nurse_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['nurse_perfemale'].value+generalForm.controls['nurse_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-3">P.T Teachers</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="pt_permale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="pt_perfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="pt_temmale">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="pt_temfemale">
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['pt_permale'].value+generalForm.controls['pt_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['pt_perfemale'].value+generalForm.controls['pt_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-3">Total</div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['prin_permale'].value+generalForm.controls['vp_permale'].value+generalForm.controls['pg_permale'].value+generalForm.controls['tg_permale'].value+generalForm.controls['prt_permale'].value+generalForm.controls['nt_permale'].value+generalForm.controls['ut_permale'].value+generalForm.controls['lib_permale'].value+generalForm.controls['art_permale'].value+generalForm.controls['coun_permale'].value+generalForm.controls['comlit_permale'].value+generalForm.controls['faithmin_permale'].value+generalForm.controls['nurse_permale'].value+generalForm.controls['pt_permale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['prin_perfemale'].value+generalForm.controls['vp_perfemale'].value+generalForm.controls['pg_perfemale'].value+generalForm.controls['tg_perfemale'].value+generalForm.controls['prt_perfemale'].value+generalForm.controls['nt_perfemale'].value+generalForm.controls['ut_perfemale'].value+generalForm.controls['lib_perfemale'].value+generalForm.controls['art_perfemale'].value+generalForm.controls['coun_perfemale'].value+generalForm.controls['comlit_perfemale'].value+generalForm.controls['faithmin_perfemale'].value+generalForm.controls['nurse_perfemale'].value+generalForm.controls['pt_perfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['prin_temmale'].value+generalForm.controls['vp_temmale'].value+generalForm.controls['pg_temmale'].value+generalForm.controls['tg_temmale'].value+generalForm.controls['prt_temmale'].value+generalForm.controls['nt_temmale'].value+generalForm.controls['ut_temmale'].value+generalForm.controls['lib_temmale'].value+generalForm.controls['art_temmale'].value+generalForm.controls['coun_temmale'].value+generalForm.controls['comlit_temmale'].value+generalForm.controls['faithmin_temmale'].value+generalForm.controls['nurse_temmale'].value+generalForm.controls['pt_temmale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['prin_temfemale'].value+generalForm.controls['vp_temfemale'].value+generalForm.controls['pg_temfemale'].value+generalForm.controls['tg_temfemale'].value+generalForm.controls['prt_temfemale'].value+generalForm.controls['nt_temfemale'].value+generalForm.controls['ut_temfemale'].value+generalForm.controls['lib_temfemale'].value+generalForm.controls['art_temfemale'].value+generalForm.controls['coun_temfemale'].value+generalForm.controls['comlit_temfemale'].value+generalForm.controls['faithmin_temfemale'].value+generalForm.controls['nurse_temfemale'].value+generalForm.controls['pt_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{(generalForm.controls['prin_permale'].value+generalForm.controls['vp_permale'].value+generalForm.controls['pg_permale'].value+generalForm.controls['tg_permale'].value+generalForm.controls['prt_permale'].value+generalForm.controls['nt_permale'].value+generalForm.controls['ut_permale'].value+generalForm.controls['lib_permale'].value+generalForm.controls['art_permale'].value+generalForm.controls['coun_permale'].value+generalForm.controls['comlit_permale'].value+generalForm.controls['faithmin_permale'].value+generalForm.controls['nurse_permale'].value+generalForm.controls['pt_permale'].value)+(generalForm.controls['prin_temmale'].value+generalForm.controls['vp_temmale'].value+generalForm.controls['pg_temmale'].value+generalForm.controls['tg_temmale'].value+generalForm.controls['prt_temmale'].value+generalForm.controls['nt_temmale'].value+generalForm.controls['ut_temmale'].value+generalForm.controls['lib_temmale'].value+generalForm.controls['art_temmale'].value+generalForm.controls['coun_temmale'].value+generalForm.controls['comlit_temmale'].value+generalForm.controls['faithmin_temmale'].value+generalForm.controls['nurse_temmale'].value+generalForm.controls['pt_temmale'].value)}}"
+                        readonly>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['prin_perfemale'].value+generalForm.controls['vp_perfemale'].value+generalForm.controls['pg_perfemale'].value+generalForm.controls['tg_perfemale'].value+generalForm.controls['prt_perfemale'].value+generalForm.controls['nt_perfemale'].value+generalForm.controls['ut_perfemale'].value+generalForm.controls['lib_perfemale'].value+generalForm.controls['art_perfemale'].value+generalForm.controls['coun_perfemale'].value+generalForm.controls['comlit_perfemale'].value+generalForm.controls['faithmin_perfemale'].value+generalForm.controls['nurse_perfemale'].value+generalForm.controls['pt_perfemale'].value+generalForm.controls['prin_temfemale'].value+generalForm.controls['vp_temfemale'].value+generalForm.controls['pg_temfemale'].value+generalForm.controls['tg_temfemale'].value+generalForm.controls['prt_temfemale'].value+generalForm.controls['nt_temfemale'].value+generalForm.controls['ut_temfemale'].value+generalForm.controls['lib_temfemale'].value+generalForm.controls['art_temfemale'].value+generalForm.controls['coun_temfemale'].value+generalForm.controls['comlit_temfemale'].value+generalForm.controls['faithmin_temfemale'].value+generalForm.controls['nurse_temfemale'].value+generalForm.controls['pt_temfemale'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3"></div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="next()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div *ngIf="step==13">
+        <div class="row mt-3"></div>
+        <div class="card">
+            <div class="card-header"><b>15. Teching staff</b></div>
+        </div>
+        <div class="row mt-3"></div>
+        <div class="row mt-1">
+            <div class="col-md-2"><b>staff</b></div>
+            <div class="col-md-3"><b>permanent</b></div>
+            <div class="col-md-3"><b>Temporary</b></div>
+            <div class="col-md-2"><b>Part time</b></div>
+            <div class="col-md-2"><b>Total</b></div>
+        </div>
+
+
+        <div class="row mt-4">
+            <div class="col-md-2">Office Assistent</div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="oa_per">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="oa_tem">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="oa_part">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['oa_per'].value + generalForm.controls['oa_tem'].value + generalForm.controls['oa_part'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-2">Office Managers</div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="om_per">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="om_tem">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="om_part">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['om_per'].value+generalForm.controls['om_tem'].value+generalForm.controls['om_part'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-2">Clerks</div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="clerk_per">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="clerk_tem">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="clerk_part">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['clerk_per'].value+generalForm.controls['clerk_tem'].value+generalForm.controls['clerk_part'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-2">Lab Attendants</div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="lab_per">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="lab_tem">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="lab_part">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['lab_per'].value+generalForm.controls['lab_tem'].value+generalForm.controls['lab_part'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-2">
+                Accountant</div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="acc_per">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="acc_tem">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="acc_part">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['acc_per'].value+generalForm.controls['acc_tem'].value+generalForm.controls['acc_part'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-2">Peons/Clerks</div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="peon_per">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="peon_tem">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="peon_part">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['peon_per'].value+generalForm.controls['peon_tem'].value+generalForm.controls['peon_part'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-2">Others</div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="other_per">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="number" class="form-control" formControlName="other_tem">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+
+                    <input type="number" class="form-control" formControlName="other_part">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="input-group">
+                    <input type="number" class="form-control"
+                        value="{{generalForm.controls['other_per'].value+generalForm.controls['other_tem'].value+generalForm.controls['other_part'].value}}"
+                        readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3"></div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="next()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="step==14">
+        <div class="card-header">
+            <h3>Curricular & Extrecurricular Activities</h3>
+        </div>
+
+        <div class="row mt-2">
+            <div style="text-align:center ;">Curricular Activities</div>
+        </div>
+        <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                <label style="font-size :13px ;">No of curricular activities are carried out</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="no_curricular_carried">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">No. of Groups/Clubs/Associations/Movements present</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="no_groups">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label style="font-size :13px ;">No. of Community Services done in the last academic year</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="no_community">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div style="text-align:center ;">No. of Sports Events Participated in the Last Year</div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <label style="font-size :13px ;">School</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="last_school">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">Zonal</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="last_zonal">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">District</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="last_district">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">State</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="last_state">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">National</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="last_national">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">International</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="last_international">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div style="text-align:center ;">No. of Competitions Participated in the Last Year</div>
+        </div>
+
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <label style="font-size :13px ;">School</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="com_school">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">Zonal</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="com_zonal">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">District</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="numbr" class="form-control" formControlName="com_district">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">State</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="com_state">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">National</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="com_national">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">International</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="com_international">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div style="text-align:center ;">No.of Inter School Programmes Organized in the Last Year</div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <label style="font-size :13px ;">School</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="sclpro_school">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">Zonal</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="sclpro_zonal">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">District</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="sclpro_district">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">State</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="sclpro_state">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">National</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="sclpro_national">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :13px ;">International</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="sclpro_international">
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row mt-3"></div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="next()">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="step==15">
+        <div class="row mt-5"></div>
+        <div class="row mt-5">
+
+        <div class="card-header">
+            <h3>School timing</h3>
+        </div>
+        </div>
+        <div class="card-body">
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <label>The academic year begins in the month of</label>
+                    <span><i></i></span>
+                    <div class="input-group">
+                        <select class="form-control form-select" formControlName="year_begin">
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="Jully">Jully</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">october</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <label>Ends in the month of</label>
+                    <span><i></i></span>
+                    <div class="input-group">
+                        <select class="form-control form-select" formControlName="year_end">
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="Jully">Jully</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">october</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"> Number of Working Days During the Last Three Years</div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">2021-2022</div>
+                <div class="col-md-3">2020-2021</div>
+                <div class="col-md-3">2019-2020</div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3">No. of working days</div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="workday_21_22">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="workday_20_21">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="workday_19_20">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3">Hours of academic work each day</div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="hours_21_22">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="hours_20_21">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="hours_19_20">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3">Total Instructional hours</div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="instructional_hours_21_22">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="instructional_hours_20_21">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="instructional_hours_19_20">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3">No. of non-instructional work days for teaching staff</div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="non_instructional_hours_21_22">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="non_instructional_hours_20_21">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="non_instructional_hours_19_20">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-3">No. of Holidays other then the national Holidaysd</div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="holidays_21_22">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="holidays_20_21">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-sort-numeric-down"></i>
+                        </span>
+                        <input type="number" class="form-control" formControlName="holidays_19_20">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3"></div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="next()"> Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="step==16">
+        <div class="row mt-4"></div>
+        <div class="card-header">
+            School Timing
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <label>No. of Subject teaching periods per week</label>
+                    <input type="number" class="form-control" formControlName="sub_week">
+
+                </div>
+                <div class="col-md-6">
+
+                    <label>No. of Periods for Faith/Moral Science teaching in a week</label>
+                    <input type="number" class="form-control" formControlName="moral_week">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>No. of hours for activities in the Clubs/Groups/Associations/Movements</label>
+                    <input type="number" class="form-control" formControlName="no_clubs">
+                </div>
+                <div class="col-md-6">
+                    <label>Duration of a teaching period
+                    </label>
+                    <input type="number" class="form-control" formccontrolName="duration_teaching">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label>School Time In Summer(From))</label>
+                    <input type="time" class="form-control" formControlName="summer_from">
+                </div>
+                <div class="col-md-3">
+                    <label>School Time In Winter(To)</label>
+                    <input type="time" class="form-control" formControlName="summer_to">
+                </div>
+                <div class="col-md-3">
+                    <label>School Time In Winter(From)</label>
+                    <input type="time" class="form-control" formControlName="winter_from">
+                </div>
+                <div class="col-md-3">
+                    <label>School Time In Winter(To)</label>
+                    <input type="time" class="form-control" formControlName="winter_to">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label>Does the school work in shifts?</label>
+                    <input type="time" class="form-control" formControlName="shifts">
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="previous()">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success" (click)="onSubmit()"> Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+        </button>
+        <h2>Edu-Star</h2>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-drawer-container class="example-container" >
+
+    <mat-drawer #drawer class="example-sidenav" mode="side" opened="True">
+        <p>Menu</p>
+        <mat-nav-list class="example-list">
+            <a mat-list-item href="home">Home</a>
+            <a mat-list-item href="userprofile">User profile</a>
+            <a mat-list-item href="general">School Profile</a>
+            <a mat-list-item></a>
+        </mat-nav-list>
+
+        <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button> -->
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <div class="container">
+            <div class="card" style="width:20rem;">
+                <div class="card-header">
+                    User profile
+                </div>
+                <div class="card-body">
+                    <h1>This is Home page</h1>
+                </div>
+                <div class="card-footer">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</mat-drawer-container>

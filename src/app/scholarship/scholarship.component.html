@@ -1,0 +1,124 @@
+<form [formGroup]="ScholarshipForm">
+<div class="card container">
+<div class="row mt-2"></div>
+<div class="card-header">Scholarship</div>
+<div class="card-body">
+<table style="border: 1px solid;" >
+    <tr>
+        <td rowspan="2">Name of the Scholarship</td>
+        <td colspan="2">No. of Beneficiaries</td>
+        <td rowspan="2">By Govt</td>
+        <td rowspan="2">By Private</td>
+        <td rowspan="2">add</td>
+    </tr>
+    <tr>
+      
+        <th>Boys</th>
+        <th>Girls</th>
+    </tr>
+    <tr>
+        <td>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-sort-numeric-down"></i></span>
+                <input type="number" class="form-control" formControlName="year" formControlName="no_scholarship">
+            </div>
+        </td>
+        
+   
+        <td>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-sort-numeric-down"></i></span>
+                <input type="number" class="form-control" formControlName="boys">
+            </div>
+        </td>
+
+        <td>
+        <div class="input-group">
+            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                    class="fas fa-sort-numeric-down"></i></span>
+            <input type="number" class="form-control" formControlName="girls">
+        </div>
+    </td>
+    <td>
+        <div class="input-group">
+            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                    class="fas fa-sort-numeric-down"></i></span>
+            <input type="number" class="form-control" formControlName="govt">
+        </div>
+    </td>
+    <td>
+        <div class="input-group">
+            <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                    class="fas fa-sort-numeric-down"
+                    ></i></span>
+            <input type="number" class="form-control" formControlName="private">
+        </div>
+    </td>
+    <td>
+        <span>
+        <i class="fa fa-plus" style="color: rgb(14, 201, 14)" (click)="addNumber()"
+        ></i>
+        
+    </span>
+    </td>
+    </tr>
+
+
+
+
+    <tr *ngFor="let data of Number().controls;let i=index;" formGroupName="{{i}}" formArrayName="number">
+
+    
+            <td>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control"  formControlName="no_scolarship">
+                </div>
+            </td>
+            
+       
+            <td>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="no_boys">
+                </div>
+            </td>
+    
+            <td>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-sort-numeric-down"></i></span>
+                <input type="number" class="form-control" formControlName="no_girls">
+            </div>
+        </td>
+        <td>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-sort-numeric-down"></i></span>
+                <input type="number" class="form-control" formControlName="govt">
+            </div>
+        </td>
+        <td>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-sort-numeric-down"
+                        ></i></span>
+                <input type="number" class="form-control" formControlName="private">
+            </div>
+        </td>
+    
+        <td><span>
+            <i class="fa fa-minus" style="color: red;" (click)="removeNumber(i)" ></i>
+        </span>
+            
+    </tr>
+    {{ScholarshipForm.value |json}}
+</table>
+
+</div>
+</div>
+</form>

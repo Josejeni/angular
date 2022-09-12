@@ -1,0 +1,148 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SubserviceService } from '../subservice.service';
+
+@Component({
+  selector: 'app-staffdetails',
+  templateUrl: './staffdetails.component.html',
+  styleUrls: ['./staffdetails.component.scss']
+})
+export class StaffdetailsComponent implements OnInit {
+  staffdetailsform:StaffdetailsComponent|any
+  data:any
+
+  constructor(private fb:FormBuilder,private subservice:SubserviceService,private router:Router) { 
+
+  }
+
+  ngOnInit(): void {
+    this.staffdetailsform=this.fb.group({
+      prin_permale:[''],
+      prin_perfemale:[''],
+      prin_temmale:[''],
+      prin_temfemale:[''],
+      prin_tomale:[''],
+      prin_tofemale:[''],
+      vp_permale:[''],
+      vp_perfemale:[''],
+      vp_temmale:[''],
+      vp_temfemale:[''],
+      vp_tomale:[''],
+      vp_tofemale:[''],
+      pg_permale:[''],
+      pg_perfemale:[''],
+      pg_temmale:[''],
+      pg_temfemale:[''],
+      pg_tomale:[''],
+      pg_tofemale:[''],
+      tg_permale:[''],
+      tg_perfemale:[''],
+      tg_temmale:[''],
+      tg_temfemale:[''],
+      tg_tomale:[''],
+      tg_tofemale:[''],
+      ut_permale:[''],
+      ut_perfemale:[''],
+      ut_temmale:[''],
+      ut_temfemale:[''],
+      ut_tomale:[''],
+      ut_tofemale:[''],
+      prt_permale:[''],
+      prt_perfemale:[''],
+      prt_temmale:[''],
+      prt_temfemale:[''],
+      prt_tomale:[''],
+      prt_tofemale:[''],
+      nt_permale:[''],
+      nt_perfemale:[''],
+      nt_temmale:[''],
+      nt_temfemale:[''],
+      nt_tomale:[''],
+      nt_tofemale:[''],
+      lib_permale:[''],
+      lib_perfemale:[''],
+      lib_temmale:[''],
+      lib_temfemale:[''],
+      lib_tomale:[''],
+      lib_tofemale:[''],
+      art_permale:[''],
+      art_perfemale:[''],
+      art_temmale:[''],
+      art_temfemale:[''],
+      art_tomale:[''],
+      art_tofemale:[''],
+      coun_permale:[''],
+      coun_perfemale:[''],
+      coun_temmale:[''],
+      coun_temfemale:[''],
+      coun_tomale:[''],
+      coun_tofemale:[''],
+      comlit_permale:[''],
+      comlit_perfemale:[''],
+      comlit_temmale:[''],
+      comlit_temfemale:[''],
+      comlit_tomale:[''],
+      comlit_tofemale:[''],
+      faithmin_permale:[''],
+      faithmin_perfemale:[''],
+      faithmin_temmale:[''],
+      faithmin_temfemale:[''],
+      faithmin_tomale:[''],
+      faithmin_tofemale:[],
+      nurse_permale:[''],
+      nurse_perfemale:[''],
+      nurse_temmale:[''],
+      nurse_temfemale:[''],
+      nurse_tomale:[''],
+      nurse_tofemale:[],
+      pt_permale:[''],
+      pt_perfemale:[''],
+      pt_temmale:[''],
+      pt_temfemale:[''],
+      pt_tomale:[''],
+      pt_tofemale:[''],
+      to_permale:[''],
+      to_perfemale:[''],
+      to_temmale:[''],
+      to_temfemale:[''],
+      to_tomale:[''],
+      to_tofemale:[''],
+      om_per:[''],
+      om_tem:[''],
+      om_part:[''],
+      om_total:[''],
+      oa_per:[''],
+      oa_tem:[''],
+      oa_part:[''],
+      oa_total:[''],
+      clerk_per:[''],
+      clerk_tem:[''],
+      clerk_part:[''],
+      clerk_total:[''],
+      lab_per:[''],
+      lab_tem:[''],
+      lab_part:[''],
+      lab_total:[''],
+      acc_per:[''],
+      acc_tem:[''],
+      acc_part:[''],
+      acc_total:[''],
+      peon_per:[''],
+      peon_tem:[''],
+      peon_part:[''],
+      peon_total:[''],
+      other_per:[''],
+      other_tem:[''],
+      other_part:[''],
+      other_total:[''],
+    })
+  }
+  onSubmit(){
+    this.subservice.staff(this.staffdetailsform.value).subscribe(arg=>{
+      this.data=arg
+      this.router.navigate(['/login'])
+    })
+  }
+
+}

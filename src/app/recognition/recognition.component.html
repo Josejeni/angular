@@ -1,0 +1,557 @@
+<form>
+    <div class="card">
+        <div class="row mt-3"></div>
+        <div class="row mt-4">
+            <div>
+                <div style="background-color:  rgb(45, 172, 45); text-align: center;width: 1160px;" class="container">4
+                    -Recognition, Affiliation and School Governance Governance</div>
+            </div>
+        </div>
+        <div class="row mt-2"></div>
+        <div class="row mt-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <div class="row">
+                    <label style="font-size :13px ;">Is the institute duly recognized by the Govt?</label>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-calendar-alt"></i></span>
+                        <input type="number" class="form-control" formControlName="year">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">Name of the Board Affiliated with</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-list"></i></span>
+                    <input type="text" class="form-control" formControlName="slevel">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">Affiliation No</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-language"></i></span>
+                    <input type="number" class="form-control" formControlName="medium">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">Year of Affiliation</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="number" class="form-control" formControlName="nature">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">Is the affiliation permanent or temporary?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-sort-numeric-down"></i></span>
+                    <select class="form-control" formControlName="tstaff">
+                        <option formControlName="tstaff">------select------</option>
+                        <option formControlName="tstaff">Permanent</option>
+                        <option formControlName="tstaff">Temporary</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">State the conditions for affiliation?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-venus-mars"></i></span>
+                    <select class="form-control form-select">
+                        <option value="null">------select------</option>
+                        <option value="co-ed" formControlName="gender">Co-education</option>
+                        <option value="Boys" formControlName="gender">Boys</option>
+                        <option value="Grils" formControlName="gender">Girls</option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <label style="font-size :13px ;">Have you obtained minority status certificate?</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="text" class="form-control" formControlName="girls">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1">
+            <div style="text-align: center;">
+                Number of Students According to Religion
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <label style="font-size :14px ;">Hindhu</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="nstaff">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :14px ;">Christian</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="cname">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :14px ;">Islam</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="cpno" required="fill it">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :14px ;">Others</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="cpno" required="fill it">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label style="font-size :14px ;">Non-believers</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="cpno" required="fill it">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-6">
+
+                <label>School Secured Other Essential Certificates</label>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <label>Fire safty certificate</label>
+            </div>
+            <div class="col-md-1">
+                <input type="radio">Yes
+            </div>
+            <div class="col-md-1">
+                <input type="radio">No
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <label>Sanitation certificate</label>
+            </div>
+            <div class="col-md-1">
+                <input type="radio">Yes
+            </div>
+            <div class="col-md-1">
+                <input type="radio">No
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                <label> Builing Safty certificate</label>
+            </div>
+            <div class="col-md-1">
+                <input type="radio">Yes
+            </div>
+            <div class="col-md-1">
+                <input type="radio">No
+            </div>
+        </div>
+        <div class="card-footer"><button class="btn btn-success">Next</button>
+        </div>
+    </div>
+    <div class="card">
+    <div class="row mt-3"></div>
+    <div class="row mt-4">
+        <div>
+            <div style="background-color:  rgb(45, 172, 45); text-align: center;width: 1160px;" class="container">5
+                -Recognition, Affiliation and School Governance Governance</div>
+        </div>
+    </div>
+    <div class="row mt-2"></div>
+    <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="row">
+                <label style="font-size :13px ;">School owned by</label>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-calendar-alt"></i></span>
+                    <select class="form-control form-select">
+                        <option value="null">------select------</option>
+                        <option value="co-ed" formControlName="gender">individual</option>
+                        <option value="Boys" formControlName="gender">trust</option>
+                        <option value="Grils" formControlName="gender">Company</option>
+                        <option value="Grils" formControlName="gender">Society</option>
+                        <option value="Grils" formControlName="gender">Government</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Name of the Trust/ Society/ Company</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-list"></i></span>
+                <input type="text" class="form-control" formControlName="slevel">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Is the Trust/ Society/ Company registered?</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-language"></i></span>
+                <select class="form-control form-select">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">If yes, under which Act?</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-th-list"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Year of Registration</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-sort-numeric-down"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Registration No</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-venus-mars"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Period of Validity of Registration</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-sort-numeric-down"></i></span>
+                <input type="text" class="form-control" formControlName="girls">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Name(President/Chairman/ Managing Trustee)</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-th-list"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Designation(President/Chairman/ Managing Trustee)</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-th-list"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Address(President/Chairman/ Managing Trustee)</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-sort-numeric-down"></i></span>
+                <input type="text" class="form-control" formControlName="girls">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Phone Number(President/Chairman/ Managing Trustee)</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-th-list"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Email address(President/Chairman/ Managing Trustee)
+            </label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-th-list"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+    </div>
+    <div class="card-footer"><button class="btn btn-success">Next</button>
+    </div>
+    </div>
+    <div class="row mt-5"></div>
+    <div class="row mt-3"></div>
+    <div class="row mt-4">
+        <div class="card">
+            <div>
+            <div style="background-color:  rgb(45, 172, 45); text-align: center;width: 1160px;" class="container">6
+                -Recognition, Affiliation and School Governance Governance</div>
+        </div>
+    </div>
+    <div class="row mt-2"></div>
+    <div class="row mt-1">
+        <div style="text-align: center;">
+            Governing body
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <div class="row">
+                <label style="font-size :13px ;">Governing Body of the Trust / Society / Company</label>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-calendar-alt"></i></span>
+                    <select class="form-control form-select">
+                        <option value="null">------select------</option>
+                        <option value="co-ed" formControlName="gender">individual</option>
+                        <option value="Boys" formControlName="gender">trust</option>
+                        <option value="Grils" formControlName="gender">Company</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">How many members in it?</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-list"></i></span>
+                <input type="text" class="form-control" formControlName="slevel">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Tenure of each Member</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-language"></i></span>
+                <select class="form-control form-select">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div style="text-align: center;">
+            Educative Pastoral Community Council (EPCC)
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">
+                Educative Community Council (EPCC)</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-th-list"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">How many members in it?</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-sort-numeric-down"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Tenure of each Member</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-venus-mars"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+
+            </div>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div style="text-align: center;">
+            Parent – Teacher Association
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Parent – Teacher Association Executive Body?</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-sort-numeric-down"></i></span>
+                <input type="text" class="form-control" formControlName="girls">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">How many members in it?</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-th-list"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Tenure of each Member
+            </label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-th-list"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3"></div>
+    <div class="card-footer"><button class="btn btn-success">Next</button></div>
+</div>
+    <div class="card">
+    <div class="row mt-5"></div>
+    
+    <div class="row mt-4">
+        <div>
+            <div style="background-color:  rgb(45, 172, 45); text-align: center;width: 1160px;" class="container">7
+                -Recognition, Affiliation and School Governance Governance</div>
+        </div>
+    </div>
+    <div class="row mt-2"></div>
+    <div class="row mt-1">
+        <div style="text-align: center;">
+            Student body
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <div class="row">
+                <label style="font-size :13px ;">Student Association/Councill</label>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-calendar-alt"></i></span>
+                    <select class="form-control form-select">
+                        <option value="null">------select------</option>
+                        <option value="co-ed" formControlName="gender">Yes</option>
+                        <option value="Boys" formControlName="gender">No</option>
+
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">How many members in it?</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-list"></i></span>
+                <input type="text" class="form-control" formControlName="slevel">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Tenure of each Member</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-language"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label style="font-size :13px ;">General Grievance / Complaint Cell?</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-language"></i></span>
+                <select class="form-control form-select">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+    <div class="row mt-1">
+        <div style="text-align: center;">
+            School Management Committee
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <label style="font-size :13px ;">
+                School Management Committee?</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-th-list"></i></span>
+                <select class="form-control form-select">
+                    <option value="yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">Constitution of Management Committee</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                    <i class="fas fa-sort-numeric-down"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label style="font-size :13px ;">How many members in it?</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-venus-mars"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+
+            </div>
+        </div>
+        <div class="col-md-2">
+            <label style="font-size :13px ;">Tenure of each Member</label>
+            <div class="input-group">
+                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                        class="fas fa-venus-mars"></i></span>
+                <input type="number" class="form-control" formControlName="nature">
+            </div>
+        </div>
+    </div>
+    <div class="card-footer"><button class="btn btn-success">Next</button>
+    </div>
+   </div>
+</form>
+<button mat-button matme>Menu</button>

@@ -1,0 +1,779 @@
+<div >
+<div class="row mt-4"></div>
+<form [formGroup]="staffdetailsform" (submit)="onSubmit()">
+   
+        <div class="card-header"><b>15. Teching staff</b></div>
+  ss="row mt-3">
+    <div class="row mt-1">
+        <div class="col-md-3"><b>staff</b></div>
+        <div class="col-md-3"><b>Permanent</b></div>
+        <div class="col-md-3"><b>Temporary</b></div>
+        <div class="col-md-3"><b>Total</b></div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-3"></div>
+        <div class="col-md-1">
+           Male      
+        </div>
+        <div class="col-md-2">
+            Female
+        </div>
+        <div class="col-md-1">
+            Male
+        </div>
+        <div class="col-md-2">
+            Female
+        </div>
+        <div class="col-md-1">
+            Male
+        </div>
+        <div class="col-md-2">
+            Female
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-3">Principal/Head Master</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="prin_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="prin_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="prin_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="prin_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="prin_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="prin_tofemale">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col-md-3">Vice Principal/Asst HM</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="vp_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="vp_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="vp_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="vp_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="vp_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="vp_tofemale">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col-md-3">PGTs (Post Graduate Teachers)</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="pg_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="pg_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="pg_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="pg_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="pg_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="pg_tofemale">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col-md-3">TGTs (Trained Graduate Teachers)</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="tg_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="tg_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="tg_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="tg_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="tg_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="tg_tofemale">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col-md-3">PRTs (Primary Teachers)</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="prt_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="prt_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="prt_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="prt_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="prt_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="prt_tofemale">
+            </div>
+        </div>
+    </div>  
+
+    <div class="row mt-4">
+        <div class="col-md-3">NTTs (Nursery Trained Teachers)</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="nt_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="nt_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="nt_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="nt_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="nt_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="nt_tofemale">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">Untrained Teachers</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="ut_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="ut_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="ut_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="ut_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="ut_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="ut_tofemale">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">Librarian</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="lib_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="lib_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="lib_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="lib_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="lib_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="lib_tofemale">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">Arts/Dance/Music Teachers</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="art_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="art_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="art_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="art_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="art_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="art_tofemale">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">Counsellors</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="coun_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="coun_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="coun_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="coun_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="coun_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="coun_tofemale">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">Computer Literacy</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="comlit_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="comlit_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="comlit_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="comlit_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="comlit_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="comlit_tofemale">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">Faith Ministers</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="faithmin_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="faithmin_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="faithmin_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="faithmin_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="faithmin_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="faithmin_tofemale">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">Nurse</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="nurse_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="nurse_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="nurse_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="nurse_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="nurse_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="nurse_tofemale">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">P.T Teachers</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="pt_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="pt_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="pt_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="pt_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="pt_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="pt_tofemale">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-3">Total</div>
+        <div class="col-md-1">
+                    <div class="input-group">
+                        <input type="number" class="form-control" formControlName="to_permale">
+                    </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="to_perfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="to_temmale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="to_temfemale">
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="to_tomale">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="to_tofemale">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3"></div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-md-1">
+                <button class="btn btn-success">Previous</button>
+            </div>
+            <div class="col-md-10"></div>
+            <div class="col-md-1">
+                <button class="btn btn-success">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3"></div>
+    <div class="card">
+        <div class="card-header"><b>15. Teching staff</b></div>
+    </div>
+    <div class="row mt-3"></div>
+    <div class="row mt-1">
+        <div class="col-md-2"><b>staff</b></div>
+        <div class="col-md-3"><b>permanent</b></div>
+        <div class="col-md-3"><b>Temporary</b></div>
+        <div class="col-md-2"><b>Part time</b></div>
+        <div class="col-md-2"><b>Total</b></div>
+    </div>
+
+   
+    <div class="row mt-4">
+        <div class="col-md-2">Office Assistent</div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="oa_per">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="oa_tem">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="oa_part">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="oa_total">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2">Office  Managers</div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="om_per">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="om_tem">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="om_part">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="om_total">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2">Clerks</div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="clerk_per">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="clerk_tem">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="clerk_part">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="clerk_total">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2">Lab Attendants</div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="lab_per">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="lab_tem">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="lab_part">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="lab_total">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2">
+            Accountant</div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="acc_per">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="acc_tem">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="acc_part">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="acc_total">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2">Peons/Clerks</div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="peon_per">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="peon_tem">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="peon_part">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="peon_total">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-2">Others</div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="other_per">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="other_tem">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                
+                <input type="number" class="form-control" formControlName="other_part">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" class="form-control" formControlName="other_total">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3"></div>
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-md-1">
+                <button class="btn btn-success">Previous</button>
+            </div>
+            <div class="col-md-10"></div>
+            <div class="col-md-1">
+                <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+</div>

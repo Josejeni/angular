@@ -1,0 +1,689 @@
+<form [formGroup]="academicForm">
+    <div class="card">
+        <div class="card-header" style="text-align: center;background-color: rgb(45, 172, 45);">10-Infrasructure &
+            Academic facilities</div>
+        <div>
+            <div class="row mt-3">
+                <div class="col-md-2"></div>
+                <div class="col-md-3">
+                    <label>Is the school located in a rented building or own building?</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-calendar-alt"></i></span>
+                        <select formControlName="school_building" class="form-select">
+                            <option value="Rented">Rented building</option>
+                            <option value="Own">own building</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label>Area of school Campus (in sq. mtrs.)</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-list"></i></span>
+                        <input type="text" class="form-control" formControlName="cam_area">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label>Built Up Area(in sq. mtrs.)</label>
+                    <div class="input-group">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-language"></i></span>
+                        <input type="text" class="form-control" formControlName="built_area">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <label>Playground Area (in sq. mtrs)</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="text" class="form-control" formControlName="play_area">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Number of Buildings / Floors</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="no_building">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Provisions for differently available</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-venus-mars"></i></span>
+                    <select class="form-control form-select" formControlName="provision">
+                        <option value="null">------select------</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        
+                    </select>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <label>Number of staircases</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="no_staircases">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>No. of Lifts</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="no_lift">
+                </div>
+            </div>
+            <div class="row mt-3"></div>
+
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button  class="btn btn-info">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success">Next</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row mt-3"></div>
+    <div class="card">
+        <div style="background-color:  rgb(45, 172, 45);text-align: center;" class="card-header">11 - Infrastructural &
+            Academic Facilities
+        </div>
+        <div class="row mt-3"></div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <label>Class Rooms</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-calendar-alt"></i></span>
+                    <input type="number" class="form-control" formControlName="class_rooms">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Staff Rooms</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-list"></i></span>
+                    <input type="number" class="form-control" formControlName="srooms">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Physics Lab</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-language"></i></span>
+                    <input type="number" class="form-control" formControlName="plab">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <label>Chemistry Lab</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="number" class="form-control" formControlName="clab">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Biology Lab</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="blab">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Mathematics Lab</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-venus-mars"></i></span>
+                            <input type="number" class="form-control" formControlName="mlab">
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <label>
+                    Computer Science Lab</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="comlab">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Language Lab</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="llab">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Home Science Lab</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="hslab">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <label>Library</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="library">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Auditorium</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-user"></i></span>
+                    <input type="number" class="form-control" formControlName="auditorium">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Counselors Room</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-phone"></i></span>
+                    <input type="number" class="form-control" formControlName="counroom"
+                        required="fill it">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3"></div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <label>Visitors Parlor (space)</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-calendar-alt"></i></span>
+                    <input type="number" class="form-control" formControlName="parlor">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Prayer Room / Chapel</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-list"></i></span>
+                    <input type="number" class="form-control" formControlName="proom">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Infirmary / Sick Room</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-language"></i></span>
+                    <input type="number" class="form-control" formControlName="sick_room">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <label>Canteen</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-th-list"></i></span>
+                    <input type="number" class="form-control" formControlName="canteen">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Security Room</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
+                        <i class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="secroom">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Other Room/ Halls</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-venus-mars"></i></span>
+                            <input type="number" class="form-control" formControlName="oroom">
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <label>Staff- Urinals/Toilets</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="stoilet">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Student-Urinals/Toilets</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="std_toilet">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Rooms</label>
+                <div class="input-group">
+                    <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                            class="fas fa-sort-numeric-down"></i></span>
+                    <input type="number" class="form-control" formControlName="rooms">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <label>Does your school admit children with special needs?</label>
+                <div class="input-group">
+
+                    <input type="radio" value="yes" formControlName="spcl_stud"> YES
+                    <input type="radio" value="no"formControlName="spcl_stud" style="margin-left: 100px;">NO
+                </div>
+            </div>
+            
+        </div>
+        <div class="row mt-3"></div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button  class="btn btn-info">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <div class="row"> </div>
+            <div class="card-header" style="background-color:  rgb(45, 172, 45);text-align: center;">12 -Infrastructural
+                & Academic Facilities</div>
+            <div class="row mt-3">
+
+                <div class="col-md-5"></div>
+
+                <div class="col-md-2">
+                    <label><b>Safety and Security</b></label>
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <label>Boundary Wall?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i class="fas fa-file-signature"
+                               ></i></span>
+                            <select class="form-select" formControlName="wall">
+                                <option selected>--SELECT--</option>
+                                <option value="yes" >Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+                <div class="col-md-2">
+                    <label>If Yes, Boundary Wall?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text"style="background-color: rgb(135, 223, 235);"><i class="fas fa-file-signature"
+                                    ></i></span>
+                            <select class="form-select" formControlName="if_wall">
+
+                                <option selected>--SELECT--</option>
+                                <option value="partial">partial</option>
+                                <option value="complete">complete</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+
+
+                <div class="col-md-2">
+                    <label>CCTV Cameras installed?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-file-signature"></i></span>
+                            <select class="form-select" formControlName="cctv">
+                                <option selected>--SELECT--</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+
+                <div class="col-md-2">
+                    <label>Data saved?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-file-signature"></i></span>
+                            <select class="form-select" formControlName="ds">
+                                <option selected>--SELECT--</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+            </div>
+
+
+            <div class="row mt-3">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <label>How many cameras?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-envelope"></i></span>
+                            <input type="number" placeholder="Enter How many cameras?" formControlName="no_camera"
+                                required class="form-control">
+                        </div>
+                    </div><br />
+                </div>
+
+
+                <div class="col-md-2">
+                    <label>Male Security Guard?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-file-signature"></i></span>
+                            <select class="form-select" formControlName="guard">
+                                <option selected>--SELECT--</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+
+                <div class="col-md-2">
+                    <label>How many Male Security Guards?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-user-circle"></i></span>
+                            <input type="number" placeholder="15" formControlName="no_guard" required
+                                class="form-control">
+                        </div>
+                    </div><br />
+                </div>
+
+
+                <div class="col-md-2">
+                    <label>Female Security Guard?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-file-signature"></i></span>
+                            <select class="form-select" formControlName="fguard">
+
+                                <option selected>--SELECT--</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+            </div>
+
+
+            <div class="row mt-3">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <label style="font-size: 14px;">How many Female Security Guards?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-envelope"></i></span>
+                            <input type="number" placeholder="08" formControlName="no_fguard" required
+                                class="form-control">
+                        </div>
+                    </div><br />
+                </div>
+
+
+                <div class="col-md-2">
+                    <label style="font-size: 14px;">Drinking water facilities?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-file-signature"></i></span>
+                            <select class="form-select" formControlName="water">
+
+                                <option selected>--SELECT--</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+
+                <div class="col-md-2">
+                    <label>Proper drainage facilities?</label>
+                    <div class="row mt-1">
+                        <div class="input-group">
+                            <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                    class="fas fa-file-signature"></i></span>
+                            <select class="form-select" formControlName="drainage">                                <option selected>--SELECT--</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div><br />
+                </div>
+
+            </div>
+
+
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-md-1">
+                        <button  class="btn btn-info">Previous</button>
+                    </div>
+                    <div class="col-md-10"></div>
+                    <div class="col-md-1">
+                        <button class="btn btn-success">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" style="background-color:  rgb(45, 172, 45);text-align: center;">
+            13 -Infrastructural & Academic Facilities  
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-5"></div> 
+            <div class="col-md-3">
+                <label><b>Other Benefits for the Students</b></label>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-2">
+                <label>Midday Meals Scheme?</label>
+                <div class="row mt-1">
+                    <div class="input-group">
+                        <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i class="fas fa-file-signature"></i></span>
+                    <select class="form-select" formControlName="mmeals"> 
+                        
+                         <option selected>--SELECT--</option>
+                        <option value="yes" >Yes</option>
+                        <option value="no" >No</option>
+                    </select>
+                    </div>
+                </div><br />
+            </div>  
+
+            <div class="col-md-3">
+                <label>No. of buses owned by school</label>
+                <div class="row mt-1">
+                    <div class="input-group">
+                        <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i class="fas fa-envelope"></i></span>
+                        <input type="number" placeholder="Enter No. of buses owned by school" formControlName="no_buses"
+                            required class="form-control">
+                    </div>
+                </div><br />
+            </div> 
+
+            <div class="col-md-2">
+                <label>GPS enabled camera</label>
+                <div class="row mt-1">
+                    <div class="input-group">
+                        <span class="input-group-text"style="background-color: rgb(135, 223, 235);"><i class="fas fa-user-circle"></i></span>
+                        <input type="number" placeholder="Enter GPS enabled camera" formControlName="gps" required
+                            class="form-control">
+                    </div>
+                </div><br/>
+            </div>
+
+
+
+            <div class="col-md-3">
+                <label>No. of Lady Attendance(if needed)</label>
+                <div class="row mt-1">
+                    <div class="input-group">
+                        <span class="input-group-text"style="background-color: rgb(135, 223, 235);"><i class="fas fa-user-circle"></i></span>
+                        <input type="number" placeholder="Enter No. of Lady Attendance(if needed)" formControlName="nola" required
+                            class="form-control">
+                    </div>
+                </div><br/>
+            </div>  
+        </div>
+        <div class="row mt-2">  
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <label>First Aid kit</label>
+                <div class="row mt-1">
+                    <div class="input-group">
+                        <span class="input-group-text"style="background-color: rgb(135, 223, 235);"><i class="fas fa-envelope"></i></span>
+                        <input type="number" placeholder="Enter First Aid kit" formControlName="first_aid"
+                            required class="form-control">
+                    </div>
+                </div><br />
+            </div> 
+
+
+            
+
+            <div class="col-md-2">
+                <label>Drinking Water</label>
+                <div class="row mt-1">
+                    <div class="input-group">
+                        <span class="input-group-text"style="background-color: rgb(135, 223, 235);"><i class="fas fa-user-circle"></i></span>
+                        <input type="number" placeholder="Enter Drinking Water" formControlName="no_water" required
+                            class="form-control">
+                    </div>
+                </div><br/>
+            </div>
+
+
+
+            <div class="col-md-3">
+                <label>No. of buses sub-contracted</label>
+                <div class="row mt-1">
+                    <div class="input-group">
+                        <span class="input-group-text"style="background-color: rgb(135, 223, 235);"><i class="fas fa-user-circle"></i></span>
+                        <input type="number" placeholder="enter No. of buses sub-contracted" formControlName="no_sbus" required
+                            class="form-control">
+                    </div>
+                </div><br/>
+            </div>
+
+
+            <div class="col-md-3">
+                <label>Eligibility for Govt free bus pass?</label>
+                <div class="row mt-1">
+                    <div class="input-group">
+                        <span class="input-group-text"style="background-color: rgb(135, 223, 235);"><i class="fas fa-file-signature"></i></span>
+                    <select class="form-select" formControlName="pas"> 
+                         <option selected>--SELECT--</option>
+                        <option value="yes" >Yes</option>
+                        <option value="no" >No</option>
+                    </select>
+                    </div>
+                </div><br />
+            </div> 
+
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <label>Free transport Service offered by the School?</label>
+                <div class="row mt-1">
+                    <div class="input-group">
+                        <span class="input-group-text"style="background-color: rgb(135, 223, 235);"><i class="fas fa-file-signature"></i></span>
+                    <select class="form-select" formControlName="free_tran"> 
+                       
+                         <option selected>--SELECT--</option>
+                        <option value="yes" >Yes</option>
+                        <option value="no" >No</option>
+                    </select>
+                    </div>
+                </div><br />
+            </div>             
+
+        </div>
+
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-1">
+                    <button  class="btn btn-info">Previous</button>
+                </div>
+                <div class="col-md-10"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-success"(click)="onsubmit()">Save</button>
+                </div>
+            </div>
+        </div>     
+    </div>
+</form>
