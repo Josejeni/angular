@@ -6,6 +6,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SubserviceService } from '../subservice.service';
 // import { SubserviceService } from '../subservice.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -41,6 +42,13 @@ export class LoginComponent implements OnInit {
       console.log(arg)
       if(arg!==null){
         // this.id=arg 
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: false,
+          timer: 1500
+        })
         this.router.navigate(['/home',{"id":arg}]);
       } 
       })

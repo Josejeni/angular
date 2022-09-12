@@ -210,6 +210,7 @@
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                 class="fas fa-calendar-alt"></i></span>
                         <input type="number" class="form-control" formControlName="year">
+                        <div *ngIf="generalForm.controls['year'].invalid && generalForm.controls['year'].touched" style="color:red">&nbsp;&nbsp;*</div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -218,6 +219,7 @@
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                 class="fas fa-list"></i></span>
                         <input type="text" class="form-control" formControlName="slevel">
+                        <div *ngIf="generalForm.controls['slevel'].invalid && generalForm.controls['slevel'].touched" style="color:red">&nbsp;&nbsp;*</div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -226,6 +228,7 @@
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                 class="fas fa-language"></i></span>
                         <input type="text" class="form-control" formControlName="medium">
+                        <div *ngIf="generalForm.controls['medium'].invalid && generalForm.controls['medium'].touched" style="color:red">&nbsp;&nbsp;*</div>
                     </div>
                 </div>
             </div>
@@ -237,6 +240,7 @@
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
                             <i class="fas fa-th-list"></i></span>
                         <input type="text" class="form-control" formControlName="nature">
+                        <div *ngIf="generalForm.controls['nature'].invalid && generalForm.controls['nature'].touched" style="color:red">&nbsp;&nbsp;*</div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -245,6 +249,7 @@
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
                             <i class="fas fa-sort-numeric-down"></i></span>
                         <input type="text" class="form-control" formControlName="tstaff">
+                        <div *ngIf="generalForm.controls['tstaff'].invalid && generalForm.controls['tstaff'].touched" style="color:red">&nbsp;&nbsp;*</div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -258,8 +263,9 @@
                             <option value="Boys">Boys</option>
                             <option value="Grils">Girls</option>
                         </select>
-
+                        <div *ngIf="generalForm.controls['gender'].invalid && generalForm.controls['gender'].touched" style="color:red">&nbsp;&nbsp;*</div>
                     </div>
+                    
                 </div>
             </div>
             <div class="row mt-3">
@@ -270,6 +276,7 @@
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                 class="fas fa-sort-numeric-down"></i></span>
                         <input type="number" class="form-control" formControlName="girls">
+                        <div  *ngIf="generalForm.controls['girls'].invalid && generalForm.controls['girls'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -278,6 +285,7 @@
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                 class="fas fa-sort-numeric-down"></i></span>
                         <input type="number" class="form-control" formControlName="boys">
+                        <div *ngIf="generalForm.controls['boys'].invalid && generalForm.controls['boys'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -286,6 +294,7 @@
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                 class="fas fa-sort-numeric-down"></i></span>
                         <input type="number" class="form-control" formControlName="students">
+                        <div *ngIf="generalForm.controls['students'].invalid  && generalForm.controls['students'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                     </div>
                 </div>
             </div>
@@ -297,6 +306,8 @@
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                 class="fas fa-sort-numeric-down"></i></span>
                         <input type="text" class="form-control" formControlName="nstaff">
+                        <div *ngIf="generalForm.controls['nstaff'].invalid  && generalForm.controls['nstaff'].touched" style="color:red"> &nbsp;&nbsp;*</div>
+
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -305,6 +316,7 @@
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                 class="fas fa-user"></i></span>
                         <input type="text" class="form-control" formControlName="cname">
+                        <div *ngIf="generalForm.controls['cname'].invalid  && generalForm.controls['cname'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -314,6 +326,7 @@
                                 class="fas fa-phone"></i></span>
                         <input type="tel" pattern="[0-9]{10}" class="form-control" formControlName="cpno"
                             required="fill it">
+                            <div *ngIf="generalForm.controls['cpno'].invalid  && generalForm.controls['cpno'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                     </div>
                 </div>
             </div>
@@ -348,6 +361,7 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-user"></i></span>
                             <input type="text" class="form-control" formControlName="pname">
+                            <div *ngIf="generalForm.controls['pname'].invalid  && generalForm.controls['pname'].touched" style="color:red">*</div>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -356,6 +370,7 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-envelope"></i></span>
                             <input type="email" class="form-control" formControlName="pemail" required>
+                            <div *ngIf="generalForm.controls['pemail'].invalid  && generalForm.controls['pemail'].touched" style="color:red">*</div>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -364,6 +379,7 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-phone"></i></span>
                             <input type="tel" pattern="[0-9]{10}" class="form-control" formControlName="ppno">
+                            <div *ngIf="generalForm.controls['ppno'].invalid  && generalForm.controls['ppno'].touched" style="color:red">*</div>
                         </div>
                     </div>
                 </div>
@@ -375,6 +391,7 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
                                 <i class="fas fa-phone"></i></span>
                             <input type="tel" pattern="[0-9]{10}" class="form-control" formControlName="opno">
+                            <div *ngIf="generalForm.controls['opno'].invalid  && generalForm.controls['opno'].touched" style="color:red">*</div>
                         </div>
                     </div>
                 </div>
@@ -421,7 +438,7 @@
                                     <option value="Yes">Yes</option>
                                     <!-- <option value="no">No</option> -->
                                 </select>
-
+                                <div *ngIf="generalForm.controls['institute_govt'].invalid  && generalForm.controls['institute_govt'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                             </div>
                         </div>
                     </div>
@@ -435,7 +452,7 @@
                                 <option value="CBSE">CBSE</option>
                                 <option value="ICSE">ICSE</option>
                             </select>
-
+                            <div *ngIf="generalForm.controls['board_affiliated'].invalid  && generalForm.controls['board_affiliated'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -444,6 +461,7 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-language"></i></span>
                             <input type="number" class="form-control" formControlName="affiliation_no">
+                            <div *ngIf="generalForm.controls['affiliation_no'].invalid  && generalForm.controls['affiliation_no'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
                 </div>
@@ -455,6 +473,7 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
                                 <i class="fas fa-th-list"></i></span>
                             <input type="number" class="form-control" formControlName="affiliation_year">
+                            <div *ngIf="generalForm.controls['affiliation_year'].invalid  && generalForm.controls['affiliation_year'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -467,7 +486,7 @@
                                 <option value="permanent">Permanent</option>
                                 <option value="Temporary">Temporary</option>
                             </select>
-
+                            <div *ngIf="generalForm.controls['affiliation_condition'].invalid  && generalForm.controls['affiliation_condition'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -476,6 +495,7 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-venus-mars"></i></span>
                             <input type="number" class="form-control" formControlName="affiliation_cons">
+                            <div *ngIf="generalForm.controls['affiliation_cons'].invalid  && generalForm.controls['affiliation_cons'].touched" style="color:red"> &nbsp;&nbsp;*</div>
 
                         </div>
                     </div>
@@ -488,6 +508,8 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-sort-numeric-down"></i></span>
                             <input type="text" class="form-control" formControlName="status_certificate">
+                            <div *ngIf="generalForm.controls['status_certificate'].invalid  && generalForm.controls['status_certificate'].touched" style="color:red"> &nbsp;&nbsp;*</div>
+
                         </div>
                     </div>
                 </div>
@@ -506,6 +528,8 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-sort-numeric-down"></i></span>
                             <input type="number" class="form-control" formControlName="hindhu">
+                            <div *ngIf="generalForm.controls['hindhu'].invalid  && generalForm.controls['hindhu'].touched" style="color:red"> &nbsp;&nbsp;*</div>
+
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -514,6 +538,7 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-sort-numeric-down"></i></span>
                             <input type="number" class="form-control" formControlName="cristian">
+                            <div *ngIf="generalForm.controls['cristian'].invalid  && generalForm.controls['cristian'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -522,6 +547,7 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-sort-numeric-down"></i></span>
                             <input type="number" class="form-control" formControlName="islam" required="fill it">
+                            <div *ngIf="generalForm.controls['islam'].invalid  && generalForm.controls['islam'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -530,6 +556,7 @@
                             <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-sort-numeric-down"></i></span>
                             <input type="number" class="form-control" formControlName="others" required="fill it">
+                            <div *ngIf="generalForm.controls['others'].invalid  && generalForm.controls['others'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
                     </div>
@@ -541,6 +568,7 @@
                                     class="fas fa-sort-numeric-down"></i></span>
                             <input type="number" class="form-control" formControlName="non_believers"
                                 required="fill it">
+                                <div *ngIf="generalForm.controls['non_believers'].invalid  && generalForm.controls['non_believers'].touched" style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
                 </div>
@@ -556,6 +584,7 @@
                         
                         <div class="col-md-3">
                             <label>Fire safty certificate</label>
+                            <!-- <div *ngIf="generalForm.controls['fire_cerficate'].invalid" style="color:red"> &nbsp;&nbsp;*</div> -->
                         </div>
                         <div class="col-md-1">
                             <input type="radio" formControlName="fire_certificate" value="yes">Yes
@@ -569,6 +598,8 @@
                        
                         <div class="col-md-3">
                             <label>Sanitation certificate</label>
+                            <!-- <div *ngIf="generalForm.controls['sanitation_certificate'].invalid " style="color:red"> &nbsp;&nbsp;*</div> -->
+
                         </div>
                         <div class="col-md-1">
                             <input type="radio" formControlName="sanitation_certificate" value="yes">Yes
@@ -582,6 +613,8 @@
                         
                         <div class="col-md-3">
                             <label> Building Safty certificate</label>
+                            <!-- <div *ngIf="generalForm.controls['building_certificate'].invalid " style="color:red"> &nbsp;&nbsp;*</div> -->
+
                         </div>
                         <div class="col-md-1">
                             <input type="radio" formControlName="building_certificate" value="yes">Yes

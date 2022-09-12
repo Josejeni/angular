@@ -5,6 +5,7 @@ import { FormBuilder,FormControl,FormGroup, Validators } from '@angular/forms';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SubserviceService } from '../subservice.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-loginform',
@@ -49,6 +50,13 @@ export class LoginformComponent implements OnInit {
     else{
       localStorage.setItem('token',this.data.access_token)
       localStorage.setItem('token_type',this.data.token_type)
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Successfully loged in',
+        showConfirmButton: false,
+        timer: 1500
+      })
       this.router.navigate(['/home']); 
     }
       })   
