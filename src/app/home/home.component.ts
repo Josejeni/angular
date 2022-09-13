@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
       this.router.navigate(['home/userprofile'])
   }
   submitgen(){
-    this.router.navigate(['/general'])
+    this.router.navigate(['home/general'])
     console.log(this.id);
     
   }

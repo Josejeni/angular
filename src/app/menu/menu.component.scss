@@ -1,28 +1,17 @@
-.example-container {
-    width: 1400px;
-    height: 550px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+
+  .col-lg-15{
+    flex: 0 0 100%;
+    max-width: 100%;
   }
-  
-  .example-sidenav-content {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: aliceblue;
-  
-    
-  }
-  
-  .example-sidenav {
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: rgb(191, 186, 186);
-    
-  }
-  .container{
-    align-items: center;
-    margin-left: 400px;
-  }
-  
+  .row{
+      // align-items: center;
+      align-self: center;
+      justify-content: center;
+}
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
