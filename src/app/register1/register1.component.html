@@ -1,87 +1,140 @@
-
-
-<div class="row mt-5">
-    <div class="col-md-2"></div>
-    <div class="col-md-4">
-        <div class="row mt-5"></div>
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid">
-    </div>
-
-    <div class="col-md-4">
-        <form [formGroup]="registerForm" (ngSubmit)="submit()">
+<div class="container" style="font-family:Georgia, 'Times New Roman', Times, serif;">
+    <div class="card position-absolute top-50 start-50 translate-middle" style="background-color: rgb(255, 189, 96);">
+        <div class="card-body">
             <div class="row">
-                <div class="col-md-4"><label>Name</label></div>
-                <div class="col-md-6"><input class="form-control" type="text" formControlName="name"></div>
-          
-            <div class="col-md-2" *ngIf="registerForm.controls['name'].invalid && registerForm.controls['name'].touched" style="color: red
-            ;">
-                *</div>  </div>
-
-
-
-            <div class="row mt-3">
-                <div class="col-md-4"><label>Age</label></div>
-                <div class="col-md-6"><input type="text" class="form-control" formControlName="age" required></div>
-                <div class="col-md-2"
-                    *ngIf="registerForm. controls['age'].invalid && registerForm.controls['age'].touched"
-                    style="color: red;">
-                    required</div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-md-4"><label>Gender</label></div>
                 <div class="col-md-6">
-                    <input type="radio" value="Male"  formControlName="gender"><label>Male</label>
-                    <input type="radio" value="Female" formControlName="gender" style="margin-left: 30px;"><label >Female</label>
+                    <div class="row mt-5"></div>
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                        class="img-fluid" style="height: 250pt;">
                 </div>
-                <div class="col-md-2"
-                *ngIf="registerForm. controls['gender'].invalid && registerForm.controls['gender'].touched"
-                style="color: red;">
-                required</div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-md-4"><label>Father's name</label></div>
-                <div class="col-md-6"><input type="text" class="form-control" formControlName="father_name"></div>
-                <div class="col-md-2"
-                *ngIf="registerForm. controls['father_name'].invalid && registerForm.controls['father_name'].touched"
-                style="color: red;">
-                required</div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-md-4"><label>mother's name</label></div>
-                <div class="col-md-6"><input type="text" class="form-control" required formControlName="mother_name">
-                </div>
-                <div class="col-md-2"
-                *ngIf="registerForm. controls['mother_name'].invalid && registerForm.controls['mother_name'].touched"
-                style="color: red;">
-                required</div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-md-4"><label>Username</label></div>
-                <div class="col-md-6"><input type="text" class="form-control" required formControlName="user_name">
-                </div> <div class="col-md-2"
-                *ngIf="registerForm. controls['user_name'].invalid && registerForm.controls['user_name'].touched"
-                style="color: red;">
-                required</div>
-
-            </div>
-            <div class="row mt-3">
-                <div class="col-md-4"><label>Password</label></div>
-                <div class="col-md-6"><input type="text" class="form-control" required formControlName="password"></div>
-                <div class="col-md-2"
-                *ngIf="registerForm. controls['password'].invalid && registerForm.controls['password'].touched"
-                style="color: red;">
-                required</div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-4"></div>
                 <div class="col-md-5">
-                    <button
-                    class="btn btn-info"  [disabled] ="!registerForm.valid"  type="submit
-                        ">Submit</button>
+                    <form [formGroup]="registerForm">
+                        <div class="col" style="text-align: center;">
+                            <label>
+                                <h3><b>Register Form</b></h3>
+                            </label>
+                        </div>
+                        <div class="row">
+                            <div class="col" class="input-group">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                <input class="form-control" type="text" formControlName="name" placeholder="Full name">
+                            </div>
+                                
+                        <div class="col-md-1"
+                        *ngIf="registerForm.controls['name'].invalid && registerForm.controls['name'].touched"
+                        style="color: red
+                    ;"> 
+                        &nbsp;*</div>
+
+                            
+                        </div>
+
+
+
+
+                        <div class="row mt-3">
+
+                            <div class="col" class="input-group">
+                                <span class="input-group-text"><i class="fa fa-arrow-up-9-1"></i></span>
+                                <input type="text" class="form-control" formControlName="age" placeholder="Age">
+                            
+                                <div class="col-md-1"
+                                *ngIf="registerForm. controls['age'].invalid && registerForm.controls['age'].touched"
+                                style="color: red;">
+                                &nbsp;*</div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-3">
+                                <label>Gender</label>
+                            </div>
+                            <div class="col">
+                                <input type="radio" value="Male" formControlName="gender"><label>Male</label>
+                                <input type="radio" value="Female" formControlName="gender"
+                                    style="margin-left: 30px;"><label>Female</label>
+                            
+                            <div class="col"
+                                *ngIf="registerForm. controls['gender'].invalid && registerForm.controls['gender'].touched"
+                                style="color: red;">
+                                required</div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+
+                            <div class="col"  class="input-group">
+                                <input type="text" class="form-control" formControlName="father_name"
+                                    placeholder="Father's name">
+                                <div class="col-md-1"
+                                *ngIf="registerForm. controls['father_name'].invalid && registerForm.controls['father_name'].touched"
+                                style="color: red;">
+                                &nbsp;*</div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+
+                            <div class="col"  class="input-group">
+                                <input type="text" class="form-control" required formControlName="mother_name"
+                                    placeholder="Mother's name">
+                            
+                                <div class="col-md-1"
+                                *ngIf="registerForm. controls['mother_name'].invalid && registerForm.controls['mother_name'].touched"
+                                style="color: red;">
+                                &nbsp;*</div>
+
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+
+                            <div class="col"  class="input-group">
+                                <input type="text" class="form-control" required formControlName="user_name"
+                                    placeholder="User name">
+                                <div class="col-md-1"
+                                *ngIf="registerForm. controls['user_name'].invalid && registerForm.controls['user_name'].touched"
+                                style="color: red;">
+                                &nbsp;*</div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row mt-3">
+
+                            <div class="col"  class="input-group">
+                                <input type="text" class="form-control" required formControlName="password"
+                                    placeholder="Password">
+                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9"
+                                *ngIf="registerForm. controls['password'].invalid && registerForm.controls['password'].touched"
+                                style="color: red;">
+                                Password should contain,
+                               <li>At least 8 characters</li>
+
+                                
+                                <li>Upper,Lowercase letters</li>
+                                <!-- <li>Uppercase letters</li> -->
+                                <li>Numbers</li>
+                                <li>Special characters</li>
+                                </div>
+                        </div>   
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-5">
+                                <button class="btn btn-info" type="submit
+                                    ">Submit</button>
+                            </div>
+
+                        </div>
+
+
+                    </form>
                 </div>
 
             </div>
-        </form>
+        </div>
     </div>
 
 </div>
+<!-- </div> -->

@@ -193,6 +193,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="row mt-3"></div>
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-md-1">
@@ -215,7 +216,7 @@
 
             </div>
             <div class="card-body">
-                <div class="row mt-3"></div>
+                <div class="row mt-3">
                 <div class="col-md-4">
                     <label>Year of Establishment</label>
                     <div class="input-group">
@@ -245,6 +246,7 @@
                         <div *ngIf="generalForm.controls['medium'].invalid && generalForm.controls['medium'].touched"
                             style="color:red">&nbsp;&nbsp;*</div>
                     </div>
+                </div>
                 </div>
             </div>
             <div class="row mt-3">
@@ -355,6 +357,7 @@
                 </div>
             </div>
         </div>
+        <div class="row mt-3"> </div>
         <div class="card-footer">
             <div class="row">
                 <div class="col-md-1">
@@ -1864,8 +1867,12 @@
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
+                            <div class="col-md-1">
+                                <div *ngIf="generalForm.controls['mmeals'].invalid&& generalForm.controls['mmeals'].touched"></div>
+                                
+                            </div>
                         </div>
-                    </div><br />
+                    </div>
                 </div>
 
                 <div class="col-md-3">
@@ -1875,9 +1882,12 @@
                             <span class="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                     class="fas fa-envelope"></i></span>
                             <input type="number" placeholder="Enter No. of buses owned by school"
-                                formControlName="no_buses" required class="form-control">
+                                formControlName="no_buses" class="form-control">
+                                <div class="col-md-1">
+                                    <div *ngIf="generalForm.controls['no_buses'].invalid && generalForm.controls['no_buses'].touched"></div>
+                                </div>
                         </div>
-                    </div><br />
+                    </div>
                 </div>
 
                 <div class="col-md-3">
@@ -1888,6 +1898,9 @@
                                     class="fas fa-user-circle"></i></span>
                             <input type="number" placeholder="Enter GPS enabled camera" formControlName="gps" required
                                 class="form-control">
+                                <div class="col-md-1">
+                                    <div *ngIf="generalForm.controls['gps'].invalid && generalForm.controls['gps'].touched"></div>
+                                </div>
                         </div>
                     </div><br />
                 </div>
@@ -1902,6 +1915,9 @@
                                     class="fas fa-user-circle"></i></span>
                             <input type="number" placeholder="Enter No. of Lady Attendance(if needed)"
                                 formControlName="nola" required class="form-control">
+                                <div class="col-md-1">
+                                    <div *ngIf="generalForm.controls['nola'].invalid && generalForm.controls['nola'].touched"></div>
+                                </div>
                         </div>
                     </div><br />
                 </div>
@@ -1916,6 +1932,9 @@
                                     class="fas fa-envelope"></i></span>
                             <input type="number" placeholder="Enter First Aid kit" formControlName="first_aid" required
                                 class="form-control">
+                                <div class="col-md-1">
+                                    <div *ngIf="generalForm.controls['first_aid'].invalid && generalForm.controls['first_aid'].touched"></div>
+                                </div>
                         </div>
                     </div><br />
                 </div>
@@ -1931,6 +1950,9 @@
                                     class="fas fa-user-circle"></i></span>
                             <input type="number" placeholder="Enter Drinking Water" formControlName="no_water" required
                                 class="form-control">
+                                <div class="col-md-1">
+                                    <div *ngIf="generalForm.controls['no_water'].invalid && generalForm.controls['no_water'].touched"></div>
+                                </div>
                         </div>
                     </div><br />
                 </div>
@@ -1945,6 +1967,9 @@
                                     class="fas fa-user-circle"></i></span>
                             <input type="number" placeholder="enter No. of buses sub-contracted"
                                 formControlName="no_sbus" required class="form-control">
+                                <div class="col-md-1">
+                                    <div *ngIf="generalForm.controls['no_sbus'].invalid && generalForm.controls['no_sbus'].touched"></div>
+                                </div>
                         </div>
                     </div><br />
                 </div>
@@ -1961,6 +1986,9 @@
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
+                            <div class="col-md-1">
+                                <div *ngIf="generalForm.controls['pas'].invalid && generalForm.controls['pas'].touched"></div>
+                            </div>
                         </div>
                     </div><br />
                 </div>
@@ -1980,6 +2008,9 @@
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
+                            <div class="col-md-1">
+                                <div *ngIf="generalForm.controls['free_tran'].invalid && generalForm.controls['free_tran'].touched"></div>
+                            </div>
                         </div>
                     </div><br />
                 </div>
@@ -2005,9 +2036,9 @@
 
         <div class="card-header"><b>15. Teching staff</b></div>
 
-        <div class="row mt-3"></div>
+        <div class="row mt-2"></div>
         <div class="row mt-1">
-            <div class="col-md-3"><b>staff</b></div>
+            <div class="col-md-3" ><b> &nbsp;staff</b></div>
             <div class="col-md-3"><b>Permanent</b></div>
             <div class="col-md-3"><b>Temporary</b></div>
             <div class="col-md-3"><b>Total</b></div>
@@ -2038,7 +2069,7 @@
                 <div class="col-md-3">Principal/Head Master</div>
                 <div class="col-md-1">
                     <div class="input-group">
-                        <input type="number" class="form-c  ontrol" formControlName="prin_permale">
+                        <input type="number" class="form-control" formControlName="prin_permale">
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -2866,6 +2897,7 @@
     </div>
 
     <div *ngIf="step==14">
+        <div class="row-mt-4"></div>
         <div class="card-header">
             <h3>Curricular & Extrecurricular Activities</h3>
         </div>
@@ -3082,9 +3114,8 @@
     </div>
 
 
-    <div *ngIf="step==15">
-        <div class="row mt-5"></div>
-        <div class="row mt-5">
+    <div *ngIf="step==15">       
+        <div class="row">
 
             <div class="card-header">
                 <h3>School timing</h3>

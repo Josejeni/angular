@@ -7,6 +7,7 @@ import { SubserviceService } from '../subservice.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
+
 @Component({
   selector: 'app-loginform',
   templateUrl: './loginform.component.html',
@@ -17,15 +18,20 @@ export class LoginformComponent implements OnInit {
   data:any
   formvar:any
   error=0
+  password = "secret";
+  show = false;
+  
 
-  constructor(private subservice:SubserviceService,private router:Router) { 
+
+
+  constructor(private subservice:SubserviceService,private router:Router,private fb:FormBuilder) { 
    
   }
 
   ngOnInit(): void {
-    this.loginForm=new FormGroup({
-      user_name:new FormControl(),
-      password:new FormControl()
+    this.loginForm=this.fb.group({
+      user_name:['',Validators.required],
+      password:['',Validators.required]
     })
     
   }
@@ -63,6 +69,11 @@ export class LoginformComponent implements OnInit {
     
   }
 
+}
+fieldTextType!:boolean;
+toggleFieldTextType() {
+  
+  this.fieldTextType = !this.fieldTextType;
 }
 
 }

@@ -26,7 +26,13 @@ export class Register1Component implements OnInit {
       mother_name:['',Validators.required],
       father_name:['',Validators.required],
       user_name:['',Validators.required],
-      password:['',Validators.required]
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{7,}')
+         ]
+      ]
 
 
     })
