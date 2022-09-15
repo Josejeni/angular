@@ -70,10 +70,11 @@ export class LoginformComponent implements OnInit {
   }
 
 }
-fieldTextType!:boolean;
+  fieldTextType!: boolean;
 toggleFieldTextType() {
   
   this.fieldTextType = !this.fieldTextType;
 }
 
 }
+    
