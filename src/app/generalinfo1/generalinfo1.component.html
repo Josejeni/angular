@@ -16,8 +16,8 @@
                             <div class="input-group">
                                 <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                         class="fa fa-school"></i></span>
-                                <input type="text" class="form-control" formControlName="sname">
-                                <div *ngIf="generalForm.controls['sname'].invalid && generalForm.controls['sname'].touched"
+                                <input type="text" class="form-control" formControlName="sname" required>
+                                <div *ngIf="generalForm.get('sname')?.invalid && generalForm.get('sname')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
                             </div>
                         </div>
@@ -123,8 +123,8 @@
                             <div class="input-group">
                                 <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                         class="fas fa-link"></i></span>
-                                <input type="url" pattern="https?://.+" class="form-control" formControlName="url">
-                                <div *ngIf="generalForm.controls['url'].invalid && generalForm.controls['url'].touched"
+                                <input type="url" pattern="https?://.+" class="form-control" formControlName="url" required>
+                                <div *ngIf="generalForm.get('url')?.invalid && generalForm.get('url')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
                             </div>
                         </div>
@@ -1157,7 +1157,7 @@
                         <input type="text" class="form-control" formControlName="built_area">
                         <div class="col-md-1">
                             <div
-                                *ngIf="generalForm.controls['buit_area'].invalid && generalForm.controls['built_area'].touched">
+                                *ngIf="generalForm.controls['built_area'].invalid && generalForm.controls['built_area'].touched">
                             </div>
                         </div>
                     </div>
@@ -1168,14 +1168,17 @@
             <div class="row mt-3">
 
                 <div class="col-md-4">
-                    <label>Playground Area (in sq. mtrs)</label>
+                    <label>Provisions for differently available</label>
                     <div class="input-group">
-                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
-                            <i class="fas fa-th-list"></i></span>
-                        <input type="text" class="form-control" formControlName="play_area">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-calendar-alt"></i></span>
+                        <select formControlName="school_building" class="provision">
+                            <option value="Rented">Rented building</option>
+                            <option value="Own">own building</option>
+                        </select>
                         <div class="col-md-1">
                             <div
-                                *ngIf="generalForm.controls['play_area'].invalid &&  generalForm.controls['play_area'].touched">
+                                *ngIf="generalForm.get('school_building')?.invalid && generalForm.get('school_building')?.touched">
                             </div>
                         </div>
                     </div>
@@ -1183,36 +1186,34 @@
                 <div class="col-md-4">
                     <label>Number of Buildings / Floors</label>
                     <div class="input-group">
-                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
-                            <i class="fas fa-sort-numeric-down"></i></span>
-                        <input type="number" class="form-control" formControlName="no_building">
-                        <div class="col-md-1">
+                        <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                class="fas fa-list"></i></span>
+                        <input type="text" class="form-control" formControlName="no_building">
+                        <div class="col-md-2">
                             <div
-                                *ngIf="generalForm.controls['no_building'].invalid && generalForm.controls['no_building'].touched">
+                                *ngIf="generalForm.controls['cam_area'].invalid && generalForm.controls['cam_area'].touched">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <label>Provisions for differently available</label>
+                    <label>Playground Area (in sq. mtrs)</label>
                     <div class="input-group">
                         <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
-                                class="fas fa-venus-mars"></i></span>
-                        <select class="form-control form-select" formControlName="provision">
-                            <option value="null">------select------</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-
-                        </select>
+                                class="fas fa-language"></i></span>
+                        <input type="text" class="form-control" formControlName="play_area">
                         <div class="col-md-1">
                             <div
-                                *ngIf="generalForm.controls['provision'].touched && generalForm.controls['provision'].invalid">
+                                *ngIf="generalForm.controls['play_area'].invalid && generalForm.controls['play_area'].touched">
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
+
+
+
+           
             <div class="row mt-3">
 
                 <div class="col-md-4">
@@ -1412,7 +1413,7 @@
                             <input type="number" class="form-control" formControlName="auditorium">
                             <div class="col-md-1">
                                 <div
-                                    *ngIg="generalForm.controls['auditorium'].invalid && generalForm.controls['auditorium'].touched">
+                                    *ngIf="generalForm.controls['auditorium'].invalid && generalForm.controls['auditorium'].touched">
                                 </div>
                             </div>
                         </div>
@@ -1542,7 +1543,7 @@
                             <input type="number" class="form-control" formControlName="std_toilet">
                             <div class="col-md-1">
                                 <div
-                                    *ngIF="generalForm.controls['std_toilet'].invalid && generalForm.controls['std_toilet'].touched">
+                                    *ngIf="generalForm.controls['std_toilet'].invalid && generalForm.controls['std_toilet'].touched">
                                 </div>
                             </div>
                         </div>
@@ -1778,7 +1779,7 @@
                             <input type="number" placeholder="08" formControlName="no_fguard" required
                                 class="form-control">
                                 <div class="col-md-1">
-                                    <div *ngIf="generalForm.controls['no_feguard'].invalid && generalForm.controls['no_feguard'].touched" style="color:red">*</div>
+                                    <div *ngIf="generalForm.controls['no_fguard'].invalid && generalForm.controls['no_fguard'].touched" style="color:red">*</div>
                                 </div>
                         </div>
                     </div>
@@ -3335,49 +3336,93 @@
                 <div class="col-md-6">
 
                     <label>No. of Subject teaching periods per week</label>
-                    <input type="number" class="form-control" formControlName="sub_week">
+                    <input type="number" class="form-control" formControlName="sub_week" required>
+                    <div class="col-md-1">
+                        <div *ngIf="generalForm.get('sub_week')?.invalid&& generalForm.get('sub_week')?.touched">
+
+                        </div>
+
+                    </div>
 
                 </div>
                 <div class="col-md-6">
 
                     <label>No. of Periods for Faith/Moral Science teaching in a week</label>
-                    <input type="number" class="form-control" formControlName="moral_week">
+                    <input type="number" class="form-control" formControlName="moral_week" required>
+                    <div class="col-md-1">
+                        <div *ngIf="generalForm.get('moral_week')?.invalid&& generalForm.get('moral_week')?.touched">
+
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <label>No. of hours for activities in the Clubs/Groups/Associations/Movements</label>
-                    <input type="number" class="form-control" formControlName="no_clubs">
+                    <input type="number" class="form-control" formControlName="no_clubs" required>
+                    <div class="col-md-1">
+                        <div *ngIf="generalForm.get('no_clubs')?.invalid&& generalForm.get('no_clubs')?.touched">
+
+                        </div>
+
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <label>Duration of a teaching period
-                    </label>
-                    <input type="number" class="form-control" formccontrolName="duration_teaching">
+                    <label>
+                        Duration of a teaching period</label>
+                    <input type="number" class="form-control" formControlName="duration_teaching" required>
+                    <div class="col-md-1">
+                        <div *ngIf="generalForm.get('duration_teaching')?.invalid&& generalForm.get('duration_teaching')?.touched">
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-3">
                     <label>School Time In Summer(From))</label>
-                    <input type="time" class="form-control" formControlName="summer_from">
+                    <input type="time" class="form-control" formControlName="summer_from"required>
+                    <div class="col-md-1">
+                        <div *ngIf="generalForm.get('summer_from')?.invalid&& generalForm.get('summer_from')?.touched">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <label>School Time In Winter(To)</label>
-                    <input type="time" class="form-control" formControlName="summer_to">
+                    <input type="time" class="form-control" formControlName="summer_to" required>
+                    <div class="col-md-1">
+                        <div *ngIf="generalForm.get('summer_to')?.invalid&& generalForm.get('summer_to')?.touched">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <label>School Time In Winter(From)</label>
-                    <input type="time" class="form-control" formControlName="winter_from">
+                    <input type="time" class="form-control" formControlName="winter_from" required>
+                    <div class="col-md-1">
+                        <div *ngIf="generalForm.get('winter_from')?.invalid&& generalForm.get('winter_from')?.touched">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <label>School Time In Winter(To)</label>
-                    <input type="time" class="form-control" formControlName="winter_to">
+                    <input type="time" class="form-control" formControlName="winter_to" required>
+                    <div class="col-md-1">
+                        <div *ngIf="generalForm.get('winter_to')?.invalid&& generalForm.get('winter_to')?.touched">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-3">
                     <label>Does the school work in shifts?</label>
-                    <input type="time" class="form-control" formControlName="shifts">
+                    <input type="time" class="form-control" formControlName="shifts" required>
+                    <div class="col-md-1">
+                        <div *ngIf="generalForm.get('shifts')?.invalid&& generalForm.get('shifts')?.touched">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6"></div>
             </div>
@@ -3389,7 +3434,7 @@
                 </div>
                 <div class="col-md-10"></div>
                 <div class="col-md-1">
-                    <button class="btn btn-success" (click)="onSubmit()"> Submit</button>
+                    <button class="btn btn-success" type="submit"> Submit</button>
                 </div>
             </div>
         </div>

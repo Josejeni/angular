@@ -4,7 +4,9 @@ import { SubserviceService } from '../subservice.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { group } from '@angular/animations';
+import Swal from 'sweetalert2';
+
+
 @Component({
   selector: 'app-userprofile',
   templateUrl: './userprofile.component.html',
@@ -28,8 +30,8 @@ export class UserprofileComponent implements OnInit {
       name:[Validators.required],
       age:[Validators.required],
       gender:[Validators.required],
-      father_name:[Validators.required],
-      mother_name:[Validators.required],
+      dob:[Validators.required],
+      mailid:[Validators.required],
       user_name:[Validators.required],
       password:[Validators.required]   
     })
@@ -49,8 +51,8 @@ loadData(){
     gender:new FormControl(this.data.gender),
     user_name:new FormControl(this.data.user_name),
     // password:new FormControl(this.data.password),
-    father_name:new FormControl(this.data.father_name),
-    mother_name:new FormControl(this.data.mother_name),
+    mailid:new FormControl(this.data.mailid),
+    dob:new FormControl(this.data.dob),
 })
 }
 update(){
@@ -69,11 +71,42 @@ Back(){
 }
 deleterec(){
   console.log(this.id);  
-  this.subservice.udel().subscribe(arg=>{
-  this.data=arg;  
-  this.router.navigate(['/login']);
-  },error =>
-  {this.router.navigate(['/login'])});
+  Swal.fire({
+    title: 'Are you sure to Delete?',
+    showDenyButton: true,
+    // showCancelButton: true,
+    confirmButtonText: 'Yes',
+    denyButtonText: 'No',
+    customClass: {
+      // actions: 'my-actions',
+      // cancelButton: 'order-1 right-gap',
+      confirmButton: 'order-2',
+      denyButton: 'order-3',
+    
+     
+      // confirmButtonClass: 'btn btn-success btn-full-width mar-bot-5',
+      
+    }
+  }).then((result) => {
+    if (result.isConfirmed) {
+      this.subservice.udel().subscribe(arg=>{
+        this.data=arg;  
+        this.router.navigate(['/login']);
+        },error =>
+        {
+          Swal.fire('Deleted!', '', 'success')
+          this.router.navigate(['/login'])});
+      
+    } 
+    
+    
+    else if (result.isDenied) {
+      Swal.fire('Canceled', '', 'info')
+      this.router.navigate(['/userprofile'])
+    }
+  })
 
-}
+
+  }
+
 }

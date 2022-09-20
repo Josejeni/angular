@@ -5,7 +5,8 @@ import { FormBuilder,FormControl,FormGroup, Validators } from '@angular/forms';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { SubserviceService } from '../subservice.service';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
+import swal from 'sweetalert2';
+import { min } from 'rxjs';
 
 
 @Component({
@@ -56,12 +57,20 @@ export class LoginformComponent implements OnInit {
     else{
       localStorage.setItem('token',this.data.access_token)
       localStorage.setItem('token_type',this.data.token_type)
-      Swal.fire({
+      swal.fire({
         position: 'center',
         icon: 'success',
         title: 'Successfully loged in',
-        showConfirmButton: false,
-        timer: 1500
+        width: '400px',
+        timer: 5000,
+        heightAuto: false,
+        showCloseButton:false
+        // showCancelButton: true,
+       
+        // closeButtonAriaLabel:"false",
+        // cancelButtonText: 'No',
+        // showConfirmButton: false,
+        
       })
       this.router.navigate(['/home']); 
     }
@@ -70,11 +79,10 @@ export class LoginformComponent implements OnInit {
   }
 
 }
-  fieldTextType!: boolean;
+  fieldTextType:any;
 toggleFieldTextType() {
   
   this.fieldTextType = !this.fieldTextType;
 }
 
 }
-    

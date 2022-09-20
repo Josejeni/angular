@@ -8,7 +8,7 @@
                         class="img-fluid" style="height: 250pt;">
                 </div>
                 <div class="col-md-5">
-                    <form [formGroup]="registerForm">
+                    <form [formGroup]="registerForm" (ngSubmit)="submit()">
                         <div class="col" style="text-align: center;">
                             <label>
                                 <h3><b>Register Form</b></h3>
@@ -37,7 +37,7 @@
 
                             <div class="col" class="input-group">
                                 <span class="input-group-text"><i class="fa fa-arrow-up-9-1"></i></span>
-                                <input type="text" class="form-control" formControlName="age" placeholder="Age">
+                                <input type="number" class="form-control" formControlName="age" placeholder="Age">
                             
                                 <div class="col-md-1"
                                 *ngIf="registerForm. controls['age'].invalid && registerForm.controls['age'].touched"
@@ -63,10 +63,11 @@
                         <div class="row mt-3">
 
                             <div class="col"  class="input-group">
-                                <input type="text" class="form-control" formControlName="father_name"
-                                    placeholder="Father's name">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                <input type="email" class="form-control" formControlName="mailid"
+                                    placeholder="Mail i'd">
                                 <div class="col-md-1"
-                                *ngIf="registerForm. controls['father_name'].invalid && registerForm.controls['father_name'].touched"
+                                *ngIf="registerForm. controls['mailid'].invalid && registerForm.controls['mailid'].touched"
                                 style="color: red;">
                                 &nbsp;*</div>
                             </div>
@@ -74,11 +75,12 @@
                         <div class="row mt-3">
 
                             <div class="col"  class="input-group">
-                                <input type="text" class="form-control" required formControlName="mother_name"
-                                    placeholder="Mother's name">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                <input type="date" class="form-control" required formControlName="dob"
+                                    placeholder="DOB">
                             
                                 <div class="col-md-1"
-                                *ngIf="registerForm. controls['mother_name'].invalid && registerForm.controls['mother_name'].touched"
+                                *ngIf="registerForm. controls['dob'].invalid && registerForm.controls['dob'].touched"
                                 style="color: red;">
                                 &nbsp;*</div>
 
@@ -87,6 +89,7 @@
                         <div class="row mt-3">
 
                             <div class="col"  class="input-group">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
                                 <input type="text" class="form-control" required formControlName="user_name"
                                     placeholder="User name">
                                 <div class="col-md-1"
@@ -101,6 +104,7 @@
                         <div class="row mt-3">
 
                             <div class="col"  class="input-group">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
                                 <input type="text" class="form-control" required formControlName="password"
                                     placeholder="Password">
                                 </div>
@@ -111,8 +115,6 @@
                                 style="color: red;">
                                 Password should contain,
                                <li>At least 8 characters</li>
-
-                                
                                 <li>Upper,Lowercase letters</li>
                                 <!-- <li>Uppercase letters</li> -->
                                 <li>Numbers</li>
@@ -123,7 +125,7 @@
                         <div class="row mt-4">
                             <div class="col-md-4"></div>
                             <div class="col-md-5">
-                                <button class="btn btn-info" type="submit
+                                <button class="btn btn-info"  [disabled] ="!registerForm.valid" type="submit
                                     ">Submit</button>
                             </div>
 

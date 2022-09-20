@@ -23,14 +23,15 @@ export class Register1Component implements OnInit {
       name:['',Validators.required],
       age:['',Validators.required],
       gender:['',Validators.required],
-      mother_name:['',Validators.required],
-      father_name:['',Validators.required],
+      mailid:['',Validators.email],
+      dob:['',Validators.required],
       user_name:['',Validators.required],
       password: [
         '',
         [
           Validators.required,
-          Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')
+          // Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8}')
+          Validators.pattern('(?=.*[0-9]).{10}')
          ]
       ]
 
@@ -48,7 +49,7 @@ export class Register1Component implements OnInit {
       this.http.post(" http://127.0.0.1:8000/pwd_encrypt",this.registerForm.value).subscribe(arg=>{
       this.data=arg
       console.log(this.data)
-      return this.router.navigate(['/login']);
+      this.router.navigate(['/login']);
   })
 }
 

@@ -24,7 +24,7 @@ export class Generalinfo1Component implements OnInit {
     // console.log(this.id);
 
     this.generalForm=this.fb.group({
-      sname:['',Validators.required],   
+      sname:[''],   
       post:['',Validators.required],
       district:['',Validators.required],
       state:['',Validators.required],

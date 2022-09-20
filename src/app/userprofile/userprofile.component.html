@@ -1,11 +1,6 @@
-<div class=" card container" style="align-items: center;" >
-   
-        <!-- <div class="col-md-4">
-            <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2015%2F10%2F05%2F22%2F37%2Fblank-profile-picture-973460_1280.png&imgrefurl=https%3A%2F%2Fpixabay.com%2Fvectors%2Fblank-profile-picture-mystery-man-973460%2F&tbnid=H6pHpB03ZEAgeM&vet=12ahUKEwi6kZa58MD5AhU63jgGHWdxApkQMygJegUIARDwAQ..i&docid=wg0CyFWNfK7o5M&w=1280&h=1280&q=images%20for%20profile&ved=2ahUKEwi6kZa58MD5AhU63jgGHWdxApkQMygJegUIARDwAQ"
-                class="img-fluid">
-        </div> -->
+<div class="card container" style="align-items: center;" >
 
-        <div class="col-md-8">
+        <div class="col-md-8" style="align-items: center;" >
             <form [formGroup]="Userprofile">
                 <div class="row mt-3 card-header" style="text-align:center ;background-color: rgb(124, 124, 175);">
                     <h3 >Userprofile page</h3>
@@ -30,14 +25,14 @@
                     <div class="col-md-1" *ngIf="Userprofile.controls['gender'].invalid && Userprofile.controls['gender'].touched"style="color:red;">*</div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-6"><label>Father's Name</label></div>
-                    <div class="col-md-5"><input class="form-control"type="text" required formControlName="father_name"></div>
-                    <div class="col-md-1" *ngIf="Userprofile.controls['father_name'].invalid && Userprofile.controls['father_name'].touched" style="color:red;">*</div>
+                    <div class="col-md-6"><label>dob</label></div>
+                    <div class="col-md-5"><input class="form-control"type="date" required formControlName="dob"></div>
+                    <div class="col-md-1" *ngIf="Userprofile.controls['dob'].invalid && Userprofile.controls['dob'].touched" style="color:red;">*</div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-6"><label>Mother's Name</label></div>
-                    <div class="col-md-5"><input class="form-control" type="text" required formControlName="mother_name"></div>
-                    <div class="col-md-1" *ngIf="Userprofile.controls['mother_name'].invalid && Userprofile.controls['mother_name'].touched" style="color:red;">*</div>
+                    <div class="col-md-6"><label>Mail I'd</label></div>
+                    <div class="col-md-5"><input class="form-control" type="email" required formControlName="mailid"></div>
+                    <div class="col-md-1" *ngIf="Userprofile.controls['mailid'].invalid && Userprofile.controls['mailid'].touched" style="color:red;">*</div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6"><label>Username</label></div>
