@@ -1,7 +1,7 @@
     <form [formGroup]="loginForm" >
    
         <div class="container">
-            <div class="card position-absolute top-50 start-50 translate-middle" style="background-color: rgb(248, 172, 85);font-family: 'Courier New', Courier, monospace;">
+            <div class="card position-absolute top-50 start-50 translate-middle" style="background-color: rgb(185, 179, 179);font-family: 'Courier New', Courier, monospace;">
                 <div class="card-body">
                     <div class="row">
                         <div class="col"><img
@@ -12,17 +12,22 @@
                             <div class="row mt-4">
                                 <div class="col-md-6 input-group">
                                     <span class="input-group-text"><i class="fa fa-user"></i></span>
-                                    <input class="form-control" type="text" formControlName="user_name"  placeholder="Username">
-                                <div *ngIf="loginForm.controls['user_name'].invalid && loginForm.controls['user_name'].touched" style="color:rgb(247, 59, 6);">&nbsp;&nbsp;*</div>
+                                    <input class="form-control" required [ngStyle]="{'border-color': loginForm.controls['user_name'].touched &&loginForm.controls['user_name'].invalid? 'rgb(255, 7, 7)' : 'grey'}" type="text" formControlName="user_name"  placeholder="Username">
+                                </div>
                             </div>
+                            <div class="row mt-1">
+                                <div class="col-md-12" *ngIf="loginForm.controls['user_name'].invalid && loginForm.controls['user_name'].touched" style="color:red">* User name is required</div>
                             </div>
+                            
+                            
                             <div class="row mt-2">
                                 <div class="col-md-3 input-group">
-                                    <span class="input-group-text"><i class="fa fa-solid fa-key"></i></span>
-                                    <input class="form-control"  formControlName="password" placeholder="password"  [type]="fieldTextType?  'text': 'password'">
+                                    <!-- <span class="input-group-text"><i class="fa fa-solid fa-key"></i></span> -->
+                                    <input class="form-control"  formControlName="password" [ngStyle]="{'border-color': loginForm.controls['password'].touched &&loginForm.controls['password'].invalid? 'red' : 'grey'}" placeholder="password"  [type]="fieldTextType?  'text': 'password'">
                                     
-                                        <span class="input-group-text">
+                                        <span class="input-group-text"style="background-color: white;">
                                           <i
+                                          style="background-color: white;"
                                             class="fa"
                                             [ngClass]="{
                                               'fa-eye': fieldTextType,
@@ -32,22 +37,19 @@
                                             (click)="toggleFieldTextType()"
                                           ></i>
                                         </span>
-                                     
-<!--                                     
-                                        <button (click)="x.type=x.type=='password'?'text':'password'" class="input-group-text"><i class="fa fa-eye-slash"></i></button> -->
-                                
-                                        
-                                    <!-- <input class="form-control" formControlName="password" placeholder="password"> -->
-                                    <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" style="color:rgb(225, 21, 236);">&nbsp;&nbsp;*</div>
                                 </div>
                             </div>
+                                <div class="row mt-1">
+                                    <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" style="color:rgb(236, 21, 21);">* Password is requied</div>
+                                </div>
+                            
                             <div class="row mt-3">
                                 <div class="col-md-3"></div>
                                 <div  class="col-md-4" class="alert alert-danger"*ngIf="error==1" role="alert" style="text-align: center;color: rgb(255, 7, 7);">
                                     Invalid credential
                                   </div>
                             </div>
-                            <div class="row mt-4">
+                            <div class="row mt-3">
                                 <div class="col-md-4"></div>
                                 <div class="col">
                                     <button class="btn btn-success" [disabled] ="!loginForm.valid" (click)="onSubmit()">Login</button>
