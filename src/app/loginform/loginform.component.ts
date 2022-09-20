@@ -64,7 +64,7 @@ export class LoginformComponent implements OnInit {
         width: '400px',
         timer: 5000,
         heightAuto: false,
-        showCloseButton:false
+        // showCloseButton:false
         // showCancelButton: true,
        
         // closeButtonAriaLabel:"false",
