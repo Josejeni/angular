@@ -69,7 +69,7 @@ export class LoginformComponent implements OnInit {
        
         // closeButtonAriaLabel:"false",
         // cancelButtonText: 'No',
-        // showConfirmButton: false,
+        showConfirmButton: false,
         
       })
       this.router.navigate(['/home']); 
