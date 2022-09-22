@@ -55,4 +55,16 @@ export class MainserviceService {
     udel(path:any){
     return this.http.delete(this.base+path,{headers:this.token})
   }
+  pwdresset(data:any,url:any){
+    console.log(data);
+    console.log(this.base+url,data);
+    
+    return this.http.post(this.base+url,data)
+  }
+  pin(data:any,url:any){
+    return this.http.post(this.base+url,data)
+  }
+  pinupdate(data:any,url:any){
+    return this.http.put(this.base+url,data)
+  }
 }

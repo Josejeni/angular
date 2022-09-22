@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AcademicComponent } from './academic/academic.component';
 
 import { CurricularComponent } from './curricular/curricular.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { Generalinfo1Component } from './generalinfo1/generalinfo1.component';
 import { GhomeComponent } from './ghome/ghome.component';
 import { HomeComponent } from './home/home.component';
@@ -40,7 +41,8 @@ const routes: Routes = [
   {path:'schooltiming',component:SchoolTimingComponent},
   {path:'academic',component:AcademicComponent},
   {path:'menu',component:MenuComponent},
-  {path:"scholarship",component:ScholarshipComponent}
+  {path:"scholarship",component:ScholarshipComponent},
+  {path:"forgotpassword",component:ForgotpasswordComponent}
  
 ];
 

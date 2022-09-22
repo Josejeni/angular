@@ -26,8 +26,8 @@
                             <div class="input-group">
                                 <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                         class="fas fa-map-marker-alt"></i></span>
-                                <input type="text" class="form-control" formControlName="post">
-                                <div *ngIf="generalForm.controls['post'].invalid && generalForm.controls['post'].touched"
+                                <input type="text" class="form-control" formControlName="post" required>
+                                <div *ngIf="generalForm.get('post')?.invalid && generalForm.get('post')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
                             </div>
                         </div>
@@ -36,8 +36,8 @@
                             <div class="input-group">
                                 <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                         class="fa fa-location-arrow"></i></span>
-                                <input type="text" class="form-control" formControlName="district">
-                                <div *ngIf="generalForm.controls['district'].invalid && generalForm.controls['district'].touched"
+                                <input type="text" class="form-control" formControlName="district" required>
+                                <div *ngIf="generalForm.get('district')?.invalid && generalForm.get('district')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
 
                             </div>
@@ -50,7 +50,7 @@
                             <div class="input-group">
                                 <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);">
                                     <i class="fas fa-thumbtack"></i></span>
-                                <select class="form-select" formControlName="state">
+                                <select class="form-select" formControlName="state" required>
                                     <option value="null">----select----</option>
                                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar
@@ -91,7 +91,7 @@
                                     <option value="Uttarakhand">Uttarakhand</option>
                                     <option value="West Bengal">West Bengal</option>
                                 </select>
-                                <div *ngIf="generalForm.controls['state'].invalid && generalForm.controls['state'].touched"
+                                <div *ngIf="generalForm.get('state')?.invalid && generalForm.get('state')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
                             </div>
                         </div>
@@ -100,8 +100,8 @@
                             <div class="input-group">
                                 <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                         class="fas fa-globe"></i></span>
-                                <input type="tel" class="form-control" formControlName="city">
-                                <div *ngIf="generalForm.controls['city'].invalid && generalForm.controls['city'].touched"
+                                <input type="tel" class="form-control" formControlName="city" required>
+                                <div *ngIf="generalForm.get('city')?.invalid && generalForm.get('city')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
                             </div>
                         </div>
@@ -110,8 +110,8 @@
                             <div class="input-group">
                                 <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                         class="fas fa-phone"></i></span>
-                                <input type="tel" class="form-control" formControlName="pno">
-                                <div *ngIf="generalForm.controls['pno'].invalid && generalForm.controls['pno'].touched"
+                                <input type="tel" class="form-control" formControlName="pno" required>
+                                <div *ngIf="generalForm.get('pno')?.invalid && generalForm.get('pno')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
                             </div>
                         </div>
@@ -133,8 +133,8 @@
                             <div class="input-group">
                                 <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                         class="fas fa-envelope"></i></span>
-                                <input type="email" class="form-control" formControlName="email">
-                                <div *ngIf="generalForm.controls['email'].invalid && generalForm.controls['email'].touched"
+                                <input type="email" class="form-control" formControlName="email" required>
+                                <div *ngIf="generalForm.get('email')?.invalid && generalForm.get('email')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
                             </div>
                         </div>
@@ -143,8 +143,8 @@
                             <div class="input-group">
                                 <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                         class="fa fa-location-arrow"></i></span>
-                                <input type="number" class="form-control" formControlName="pcode">
-                                <div *ngIf="generalForm.controls['pcode'].invalid && generalForm.controls['pcode'].touched"
+                                <input type="number" class="form-control" formControlName="pcode" required>
+                                <div *ngIf="generalForm.get('pcode')?.invalid && generalForm.get('pcode')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
                             </div>
                         </div>
@@ -155,7 +155,7 @@
                             <div class="input-group">
                                 <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
                                         class="fas fa-link"></i></span>
-                                <select class="form-control" formControlName="slocation">
+                                <select class="form-control" formControlName="slocation" required>
                                     <option value="null">--Select School Location--</option>
                                     <option value="Urban">Urban</option>
                                     <option value="Semi-Urban">Semi-Urban</option>
@@ -163,30 +163,30 @@
                                     <option value="Tribal">Tribal</option>
                                 </select>
 
-                                <div *ngIf="generalForm.controls['slocation'].invalid && generalForm.controls['slocation'].touched"
+                                <div *ngIf="generalForm.get('slocation')?.invalid && generalForm.get('slocation')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label>Does your school admit children with special needs?</label>
-                            <div *ngIf="generalForm.controls['need'].invalid && generalForm.controls['need'].touched"
+                            <div *ngIf="generalForm.get('need')?.invalid && generalForm.get('need')?.touched"
                                 style="color:red">&nbsp;&nbsp;*</div>
                             <div class="input-group">
                                 <!-- <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i class="fas fa-envelope"></i></span> -->
-                                <input type="radio" value="yes" id="need_yes" formControlName="need"><label
+                                <input type="radio" value="yes" id="need_yes" formControlName="need" required><label
                                     for="need_yes">Yes</label>
                                 <input type="radio" value="no" id="need_no" style="margin-left: 30px;"
-                                    formControlName="need"><label for="need_no">No</label>
+                                    formControlName="need"><label for="need_no" required>No</label>
                             </div>
 
                         </div>
                         <div class="col-md-4">
                             <label>Assessment Academic Year</label>
                             <div class="input-group">
-                                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);"><i
+                                <span CLASS="input-group-text" style="background-color: rgb(135, 223, 235);" ><i
                                         class="fas fa-calendar-alt"></i></span>
-                                <input type="number" class="form-control" formControlName="ayear">
-                                <div *ngIf="generalForm.controls['ayear'].invalid && generalForm.controls['ayear'].touched"
+                                <input type="number" class="form-control" formControlName="ayear" required>
+                                <div *ngIf="generalForm.get('ayear')?.invalid && generalForm.get('ayear')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>
                             </div>
 

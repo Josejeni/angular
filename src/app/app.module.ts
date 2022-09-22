@@ -27,6 +27,7 @@ import{MatIconModule}from '@angular/material/icon';
 import{MatListModule}from '@angular/material/list';
 import{MatButtonModule}from '@angular/material/button';
 import { ScholarshipComponent } from './scholarship/scholarship.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 
@@ -46,6 +47,7 @@ import { ScholarshipComponent } from './scholarship/scholarship.component';
     SchoolTimingComponent,
     MenuComponent,
     ScholarshipComponent,
+    ForgotpasswordComponent,
     
     
 

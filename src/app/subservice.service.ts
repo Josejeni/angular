@@ -47,4 +47,18 @@ export class SubserviceService {
     const path=url;
     return this.mainservice.udel(path)
   }
+  pwdreset(data:any){
+    const url="/password_reset/"
+    console.log(data);
+    return this.mainservice.pwdresset(data,url)
+  }
+  pin(data:any){
+    const url="/pin_check"
+    return this.mainservice.pin(data,url)
+  }
+
+  pinupdate(data:any){
+    const url="/update_pwd"
+    return this.mainservice.pinupdate(data,url)
+  }
 }
