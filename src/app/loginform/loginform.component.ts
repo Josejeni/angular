@@ -62,7 +62,7 @@ export class LoginformComponent implements OnInit {
         icon: 'success',
         title: 'Successfully loged in',
         width: '400px',
-        timer: 5000,
+        timer: 3000,
         heightAuto: false,
         showConfirmButton: false,
         

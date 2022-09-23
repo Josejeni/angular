@@ -57,6 +57,16 @@ pincheck(){
     if (this.data){
       this.subservice.pinupdate(this.data).subscribe((arg:any)=>{
       })
+      swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Successfully changed',
+        width: '400px',
+        timer: 2000,
+        heightAuto: false,
+        showConfirmButton: false,
+        
+      })
       this.router.navigate(["/login"])
     }
     
