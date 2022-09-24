@@ -459,12 +459,12 @@
                             <div class="row">
                                 <div class="input-group">
                                     <span CLASS="input-group-text"><i class="fas fa-calendar-alt"></i></span>
-                                    <select class="form-control" formControlName="institute_govt">
+                                    <select class="form-control" formControlName="institute_govt" required>
                                         <option value="NULL" selected disabled>------select------</option>
                                         <option value="Yes">Yes</option>
                                         <option value="no">No</option>
                                     </select>
-                                    <div *ngIf="generalForm.controls['institute_govt'].invalid  && generalForm.controls['institute_govt'].touched"
+                                    <div *ngIf="generalForm.get('institute_govt')?.invalid  && generalForm.get('institute_govt')?.touched"
                                         style="color:red"> &nbsp;&nbsp;*</div>
                                 </div>
                             </div>
@@ -473,13 +473,13 @@
                             <label style="font-size :13px ;">Name of the Board Affiliated with</label>
                             <div class="input-group">
                                 <span CLASS="input-group-text"><i class="fas fa-list"></i></span>
-                                <select class="form-control" formControlName="board_affiliated">
+                                <select class="form-control" formControlName="board_affiliated" required>
                                     <option value=" " disabled selected>---select---</option>
                                     <option value="Marticulation">Marticulation</option>
                                     <option value="CBSE">CBSE</option>
                                     <option value="ICSE">ICSE</option>
                                 </select>
-                                <div *ngIf="generalForm.controls['board_affiliated'].invalid  && generalForm.controls['board_affiliated'].touched"
+                                <div *ngIf="generalForm.get('board_affiliated')?.invalid  && generalForm.get('board_affiliated')?.touched"
                                     style="color:red"> &nbsp;&nbsp;*</div>
                             </div>
                         </div>
@@ -558,7 +558,7 @@
                         <div class="input-group">
                             <span CLASS="input-group-text"><i class="fas fa-sort-numeric-down"></i></span>
                             <input type="number" class="form-control" formControlName="hindhu">
-                            <div *ngIf="generalForm.controls['hindhu'].invalid  && generalForm.controls['hindhu'].touched"
+                            <div *ngIf="generalForm.get('hindhu')?.invalid  && generalForm.get('hindhu')?.touched"
                                 style="color:red"> &nbsp;&nbsp;*</div>
 
                         </div>
@@ -567,8 +567,8 @@
                         <label style="font-size :14px ;">Christian</label>
                         <div class="input-group">
                             <span CLASS="input-group-text"><i class="fas fa-sort-numeric-down"></i></span>
-                            <input type="number" class="form-control" formControlName="cristian">
-                            <div *ngIf="generalForm.controls['cristian'].invalid  && generalForm.controls['cristian'].touched"
+                            <input type="number" class="form-control" formControlName="cristian" required placeholder="Enter the count">
+                            <div *ngIf="generalForm.get('cristian')?.invalid  && generalForm.get('cristian')?.touched"
                                 style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
@@ -576,8 +576,8 @@
                         <label style="font-size :14px ;">Islam</label>
                         <div class="input-group">
                             <span CLASS="input-group-text"><i class="fas fa-sort-numeric-down"></i></span>
-                            <input type="number" class="form-control" formControlName="islam" required="fill it">
-                            <div *ngIf="generalForm.controls['islam'].invalid  && generalForm.controls['islam'].touched"
+                            <input type="number" class="form-control" formControlName="islam" required>
+                            <div *ngIf="generalForm.get('islam')?.invalid  && generalForm.get('islam')?.touched"
                                 style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
@@ -585,8 +585,8 @@
                         <label style="font-size :14px ;">Others</label>
                         <div class="input-group">
                             <span CLASS="input-group-text"><i class="fas fa-sort-numeric-down"></i></span>
-                            <input type="number" class="form-control" formControlName="others" required="fill it">
-                            <div *ngIf="generalForm.controls['others'].invalid  && generalForm.controls['others'].touched"
+                            <input type="number" class="form-control" formControlName="others" required>
+                            <div *ngIf="generalForm.get('others')?.invalid  && generalForm.get('others')?.touched"
                                 style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
@@ -597,8 +597,8 @@
                         <div class="input-group">
                             <span CLASS="input-group-text"><i class="fas fa-sort-numeric-down"></i></span>
                             <input type="number" class="form-control" formControlName="non_believers"
-                                required="fill it">
-                            <div *ngIf="generalForm.controls['non_believers'].invalid  && generalForm.controls['non_believers'].touched"
+                                required>
+                            <div *ngIf="generalForm.get('non_believers')?.invalid  && generalForm.get('non_believers')?.touched"
                                 style="color:red"> &nbsp;&nbsp;*</div>
                         </div>
                     </div>
@@ -687,7 +687,7 @@
                         <div class="input-group">
                             <span CLASS="input-group-text"><i
                                     class="fas fa-calendar-alt"></i></span>
-                            <select class="form-control form-select" formControlName="school_owned" >
+                            <select class="form-control form-select" formControlName="school_owned" required>
                                 <option value="null" selected disabled>------select------</option>
                                 <option value="co-ed">individual</option>
                                 <option value="Boys">trust</option>
@@ -695,6 +695,7 @@
                                 <option value="Grils">Society</option>
                                 <option value="Grils">Government</option>
                             </select>
+                            <div class="col-md1" *ngIf="generalForm.get('school_owned')?.invalid && generalForm.get('school_owned')?.touched"></div>
                         </div>
                     </div>
                 </div>
@@ -703,7 +704,8 @@
                     <div class="input-group">
                         <span CLASS="input-group-text"><i
                                 class="fas fa-list"></i></span>
-                        <input type="text" class="form-control" formControlName="name_trust">
+                        <input type="text" class="form-control" formControlName="name_trust" required>
+                        <div class="col-md-1" *ngIf="generalForm.get('name_trust')?.invalid && generalForm.get('name_trust')?.touched"></div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -711,10 +713,11 @@
                     <div class="input-group">
                         <span CLASS="input-group-text"><i
                                 class="fas fa-language"></i></span>
-                        <select class="form-control form-select" formControlName="registered">
+                        <select class="form-control form-select" formControlName="registered" required>
                             <option value="yes">Yes</option>
                             <option value="No">No</option>
                         </select>
+                        <div class="col-md-1" *ngIf="generalForm.get('registered')?.invalid && generalForm.get('registered')?.touched"></div>
                     </div>
                 </div>
             </div>
@@ -725,7 +728,8 @@
                     <div class="input-group">
                         <span CLASS="input-group-text">
                             <i class="fas fa-th-list"></i></span>
-                        <input type="text" class="form-control" formControlName="under_act">
+                        <input type="text" class="form-control" formControlName="under_act" requirde>
+                        <div class="col-md-1" *ngIf="generalForm.get('under_act')?.invalid && generalForm.get('under_act')?.touched"></div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -733,7 +737,8 @@
                     <div class="input-group">
                         <span CLASS="input-group-text" >
                             <i class="fas fa-sort-numeric-down"></i></span>
-                        <input type="number" class="form-control" formControlName="registration_year">
+                        <input type="number" class="form-control" formControlName="registration_year" required>
+                        <div class="col-md-1" *ngIf="generalForm.get('registration_year')?.invalid && generalForm.get('registration_year')?.touched"></div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -741,7 +746,8 @@
                     <div class="input-group">
                         <span CLASS="input-group-text"><i
                                 class="fas fa-venus-mars"></i></span>
-                        <input type="number" class="form-control" formControlName="registration_no">
+                        <input type="number" class="form-control" formControlName="registration_no" required>
+                        <div class="col-md-1" *ngIf="generalForm.get('registration_no')?.invalid && generalForm.get('registration_no')?.touched "></div>
 
                     </div>
                 </div>
@@ -753,7 +759,8 @@
                     <div class="input-group">
                         <span CLASS="input-group-text"><i
                                 class="fas fa-sort-numeric-down"></i></span>
-                        <input type="text" class="form-control" formControlName="period_validity">
+                        <input type="text" class="form-control" formControlName="period_validity" required>
+                        <div class="col-md-1" *ngIf="generalForm.get('period_validity')?.invalid && generalForm.get('period_validation')?.touched"></div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -761,7 +768,8 @@
                     <div class="input-group">
                         <span CLASS="input-group-text">
                             <i class="fas fa-th-list"></i></span>
-                        <input type="text" class="form-control" formControlName="name_chairman">
+                        <input type="text" class="form-control" formControlName="name_chairman" required>
+                        <diV class="col-md-1" *ngIf="generalForm.get('name_chairman')?.invalid && generalForm.get('name_chairman')?.touched"></diV>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -769,7 +777,8 @@
                     <div class="input-group">
                         <span CLASS="input-group-text">
                             <i class="fas fa-th-list"></i></span>
-                        <input type="text" class="form-control" formControlName="designation">
+                        <input type="text" class="form-control" formControlName="designation" required>
+                        <div class="col-md-1" *ngIf="generalForm.get('designation')?.invalid && generalForm.get('designation')?.touched"></div>
                     </div>
                 </div>
             </div>
@@ -780,7 +789,8 @@
                     <div class="input-group">
                         <span CLASS="input-group-text"><i
                                 class="fas fa-sort-numeric-down"></i></span>
-                        <input type="text" class="form-control" formControlName="address_chairman">
+                        <input type="text" class="form-control" formControlName="address_chairman" required>
+                        <div class="col-md-1" *ngIf="generalForm.get('address_chairman')?.invalid && generalForm.get('address_chairman')?.touched"></div>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -788,7 +798,8 @@
                     <div class="input-group">
                         <span CLASS="input-group-text">
                             <i class="fas fa-th-list"></i></span>
-                        <input type="number" class="form-control" formControlName="pno_chairman">
+                        <input type="number" class="form-control" formControlName="pno_chairman" required>
+                        <div class=""></div>
                     </div>
                 </div>
                 <div class="col-md-4">
