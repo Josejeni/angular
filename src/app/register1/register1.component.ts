@@ -14,6 +14,7 @@ export class Register1Component implements OnInit {
 
   registerForm!:FormGroup;
   data:any
+  error=0
  
 
   constructor(private fb:FormBuilder,private subservice:SubserviceService,private http:HttpClient,private router:Router) { }
@@ -30,8 +31,8 @@ export class Register1Component implements OnInit {
         '',
         [
           Validators.required,
-          // Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8}')
-          Validators.pattern('(?=.*[0-9]).{10}')
+          Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')
+          // Validators.pattern('(?=.*[0-9]).{10}')
          ]
       ]
 
@@ -45,11 +46,18 @@ export class Register1Component implements OnInit {
     // if (this.loginform.value==null)
     //  console.log("Emty");
     // else{
-      alert("Successfully submited")
+      
       this.http.post(" http://127.0.0.1:8000/pwd_encrypt",this.registerForm.value).subscribe(arg=>{
       this.data=arg
       console.log(this.data)
-      this.router.navigate(['/login']);
+      if(!this.data.detail){
+        alert("Successfully submited")
+        this.router.navigate(['/login']);
+      }
+      else{
+        this.error=1
+      }
+      
   })
 }
 

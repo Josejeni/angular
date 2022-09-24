@@ -54,7 +54,7 @@ pincheck(){
     this.datapwd=this.ForgorpasswordForm.value
     console.log(this.datapwd['password'])
     console.log(this.data.password)
-    if (this.data){
+    if (!this.data.detail){
       this.subservice.pinupdate(this.data).subscribe((arg:any)=>{
       })
       swal.fire({

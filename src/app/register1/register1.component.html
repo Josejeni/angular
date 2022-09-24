@@ -97,6 +97,9 @@
                                 style="color: red;">
                                 &nbsp;*</div>
                             </div>
+                            <div class="col-md-9"> 
+                                <div *ngIf="error==1"style="color: red;">Username is already existed</div>
+                            </div> 
 
 
                         </div>
@@ -120,7 +123,8 @@
                                 <li>Numbers</li>
                                 <li>Special characters</li>
                                 </div>
-                        </div>   
+                        </div>  
+                       
                         
                         <div class="row mt-4">
                             <div class="col-md-4"></div>

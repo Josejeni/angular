@@ -12,7 +12,16 @@ import { SubserviceService } from '../subservice.service';
 })
 export class MenuComponent implements OnInit {
   menu:FormGroup
+  isMobileResolution : boolean
+
   constructor(private fb:FormBuilder,private subservice:SubserviceService,private router:Router,private http:HttpClient) {
+    if (window.innerWidth < 768) {
+      this.isMobileResolution = true;
+      console.log('hi');
+      
+    } else {
+      this.isMobileResolution = false;
+    }
     this.menu=this.fb.group({
       email:[''],
       Pin:['']
