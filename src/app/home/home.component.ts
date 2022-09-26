@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -25,5 +26,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['home/general'])
     console.log(this.id);
     
+  }
+  logout(){
+    this.router.navigate(['/login'])
   }
 }

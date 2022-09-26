@@ -1,7 +1,7 @@
 import { registerLocaleData } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AcademicComponent } from './academic/academic.component';
+import { AcademicFormComponent } from './Academicform/academicform.component';
 
 import { CurricularComponent } from './curricular/curricular.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
@@ -39,7 +39,7 @@ const routes: Routes = [
   {path:"staffdetails",component:StaffdetailsComponent},
   {path:"curricular",component:CurricularComponent},
   {path:'schooltiming',component:SchoolTimingComponent},
-  {path:'academic',component:AcademicComponent},
+  {path:'academic',component:AcademicFormComponent},
   {path:'menu',component:MenuComponent},
   {path:"scholarship",component:ScholarshipComponent},
   {path:"forgotpassword",component:ForgotpasswordComponent}

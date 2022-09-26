@@ -4,22 +4,23 @@
             Userprofile page
         </div>
         <div class="body">
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-md-1"></div>
                 <div class="col-md-4">
                     <label>Name</label>
                 <input class="form-control" type="text" required formControlName="name">
-                </div>
-                <label
+                
+                <div class="col-md-6"
                     *ngIf="Userprofile.controls['name'].invalid && Userprofile.controls['name'].touched"
-                    style="color:red;">*</label>
+                    style="color:red;">* name is required</div>
+                </div>
                     <div class="col-md-2"></div>
 
                 <div class="col-md-4">
                     <label>Age</label>
                     <input class="form-control" type="text" required formControlName="age">
                     
-                    <div class="col-md-4" *ngIf="Userprofile.controls['age'].invalid && Userprofile.controls['age'].touched"
+                    <div class="col-md-6" *ngIf="Userprofile.controls['age'].invalid && Userprofile.controls['age'].touched"
                 style="color:red;">* age is required</div>
                 </div>
 
@@ -31,22 +32,26 @@
             <div class="row mt-3">
                 <div class="col-md-1"></div>
                 <div class="col-md-4">
+                    <div>
                     <label>Gender</label>
-                    <input class="form-control" type="text" required formControlName="gender">
-                </div>
+                    </div><br>
+                    <input type="radio" value="Male" required formControlName="gender">Male
+                    <input type="radio"  value="Female" formControlName="gender">Female
+                
 
-                <div class="col-md-1"
+                <div class="col-md-6"
                     *ngIf="Userprofile.controls['gender'].invalid && Userprofile.controls['gender'].touched"
-                    style="color:red;">*</div>
+                    style="color:red;">* gender is required</div>
+                </div>
                 <div class="col-md-2"></div>
                 <div class="col-md-4">
-                       <label>dob</label>
+                       <label>DOB</label>
                         <input class="form-control" type="date" required formControlName="dob">
                 </div>
 
                  
-                <div class="col-md-1" *ngIf="Userprofile.controls['dob'].invalid && Userprofile.controls['dob'].touched"
-                    style="color:red;">*</div>
+                <div class="col-md-6" *ngIf="Userprofile.controls['dob'].invalid && Userprofile.controls['dob'].touched"
+                    style="color:red;">* dob is required</div>
                     <div class="col-md-1"></div>
 
             </div>
@@ -57,10 +62,11 @@
                 <div class="col-md-4">
                     <label>Mail I'd</label>
                     <input class="form-control" type="email" required formControlName="mailid">
-                </div>
-                <div class="col-md-1"
+                
+                <div class="col-md-6"
                     *ngIf="Userprofile.controls['mailid'].invalid && Userprofile.controls['mailid'].touched"
-                    style="color:red;">*</div>
+                    style="color:red;">* maili'd is required</div>
+                </div>
 
                     <div class="col-md-2"></div>
 

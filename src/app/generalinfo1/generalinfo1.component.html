@@ -123,7 +123,7 @@
                             <label>URL</label>
                             <div class="input-group">
                                 <span CLASS="input-group-text"><i class="fas fa-link"></i></span>
-                                <input type="url" pattern="https?://.+" class="form-control" formControlName="url"
+                                <input type="text" pattern="https?://.+" class="form-control" formControlName="url"
                                     required placeholder="Enter the url">
                                 <div *ngIf="generalForm.get('url')?.invalid && generalForm.get('url')?.touched"
                                     style="color:red">&nbsp;&nbsp;*</div>

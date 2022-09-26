@@ -13,7 +13,6 @@ import { HomeComponent } from './home/home.component';
 import { Generalinfo1Component } from './generalinfo1/generalinfo1.component';
 import { RecognitionComponent } from './recognition/recognition.component';
 import { GhomeComponent } from './ghome/ghome.component';
-import { AcademicComponent } from './academic/academic.component';
 import { StaffdetailsComponent } from './staffdetails/staffdetails.component';
 import { CurricularComponent } from './curricular/curricular.component';
 import { SchoolTimingComponent } from './school-timing/school-timing.component';
@@ -28,6 +27,7 @@ import{MatListModule}from '@angular/material/list';
 import{MatButtonModule}from '@angular/material/button';
 import { ScholarshipComponent } from './scholarship/scholarship.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { AcademicFormComponent } from './Academicform/academicform.component';
 
 
 
@@ -41,7 +41,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     Generalinfo1Component,
     RecognitionComponent,
     GhomeComponent,
-    AcademicComponent,
+    AcademicFormComponent,
     StaffdetailsComponent,
     CurricularComponent,
     SchoolTimingComponent,
