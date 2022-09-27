@@ -5,9 +5,9 @@ import { Router } from '@angular/router';
 import { SubserviceService } from '../subservice.service';
 
 @Component({
-  selector: 'app-academicForm',
-  templateUrl: './academicForm.component.html',
-  styleUrls: ['./academicForm.component.scss']
+  selector: 'app-academicform',
+  templateUrl: './academicform.component.html',
+  styleUrls: ['./academicform.component.scss']
 })
 export class AcademicFormComponent implements OnInit {
   academicForm:FormControl|any
