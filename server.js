@@ -1,9 +1,9 @@
 const express=require("express");
 const path=require("path");
 const app=express();
-app.use(express.static(__dirname+'/dist/edustar-frontend'));
+app.use(express.static(__dirname+'/dist/Edustar-frontend'));
 app.get('/*',function(req,res){
-    res.sendFile(path.join(__dirname+'/dist'+'/edustar-frontend/index.html'));
+    res.sendFile(path.join(__dirname+'/dist'+'/Edustar-frontend/index.html'));
 
 });
 app.listen(process.env.PORT || 8080)
