@@ -7,7 +7,7 @@ import { MainserviceService } from './mainservice.service';
 export class SubserviceService {
   constructor(private mainservice:MainserviceService) { }
   login(data:any){
-    const url="/log_encrypt"    
+    const url="log_encrypt"    
     return this.mainservice.login(url,data);
   }
   profile(){

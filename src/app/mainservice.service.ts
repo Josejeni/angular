@@ -10,8 +10,8 @@ export class MainserviceService {
 
   
   constructor(private http:HttpClient) { }
-  // base="https://edustar-backend.herokuapp.com/"
-  base="http://127.0.0.1:8000"
+  base="https://edustar-backend.herokuapp.com"
+  // base="http://127.0.0.1:8000"
 
   // token = new HttpHeaders({
   //   // "Authorization":arg.token_type+" "+arg.access_token
